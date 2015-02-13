@@ -7,4 +7,4 @@
     bundle
     middleman
 
-[http://localhost:4567]
+[http://localhost:4567](http://localhost:4567)
