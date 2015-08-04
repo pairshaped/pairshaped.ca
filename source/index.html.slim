@@ -6,8 +6,7 @@ div.site-container
 
   div.homepage-main-content-container
     div.logo
-      a.logo__link href='/index.html'
-        = image_tag "logo_pairshaped.svg"
+      = link_to image_tag("logo_pairshaped.svg"), '/', class: 'logo__link'
 
     div.horizontal-rule--mini
 
