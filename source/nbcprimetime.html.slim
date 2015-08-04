@@ -6,8 +6,8 @@ title: NBC Primetime Campanion App
   div.blog-header
     div.blog-header-container
       div.logo
-        a href='/index.html'
-          = image_tag "images/logo_pairshaped.svg"
+        a href='/'
+          = image_tag "logo_pairshaped.svg"
       div.blog-header-details
         div.blog-header-details__title NBC PRIMETIME COMPANION APP
         div.blog-header-details__subtitle Building a companion / second screen experience for NBCs primetime coverage of the 2014 Sochi Olympics
@@ -26,7 +26,7 @@ title: NBC Primetime Campanion App
 
     h2 Anatomy of the Timeline
 
-    div.casestudy-image= image_tag "/images/timeline-stacked.png"
+    div.casestudy-image= image_tag "timeline-stacked.png"
 
     p
      | The Timeline was the key feature of the application, serving as a kind of “central dashboard” for the app and presenting a variety of card types which were pushed to the user in real time as decided by a producer using the Composer (the Primetime Companion’s customized Content Management System, described later in this article). Producers at NBC Sports prepared over 3,000 different snippets of content that they used to feed into the timeline during the Primetime Olympics broadcast.
@@ -38,7 +38,7 @@ title: NBC Primetime Campanion App
      | We knew that we wanted to give users the ability to control when or whether to see new content on the Timeline - we didn’t want to interrupt anyone’s ability to continue reading the content that they were already engaged with. So we created an alert that displayed at the top of the Timeline that incremented in real time as new cards were pushed in, and required user initiation before the content would load. Also, at the very bottom of the Timeline, we displayed a button to load content that had occurred earlier, enabling users to go back to view content that they might not have previously seen.
 
     h2 Cards for Multiple Interactive Content Types
-    div.casestudy-image= image_tag "/images/cards.png"
+    div.casestudy-image= image_tag "cards.png"
     p
      | The Timeline consisted of six different card types: poll, trivia, fast fact, athlete bio, photo gallery and video. We also had Twitter and Instagram cards prepared to infuse a level of candid content captured at the Games by athletes and fans directly into the app.
     p
@@ -52,7 +52,7 @@ title: NBC Primetime Campanion App
     p
      | When producing a live sporting event, speed is critical. Everything we can do to make it more efficient for producers to publish content will also make for a better real-time end user experience. To that end, we created the Composer as a “Single Page Application” that consists of one main screen with three sections. Producers can use the Composer to prepare content for publication as quickly as possible, without ever leaving the main page.
 
-    div.casestudy-image= image_tag "/images/composer-main.png"
+    div.casestudy-image= image_tag "composer-main.png"
     p
      | The right column is the “Library,” which offers access to all of the Primetime Companion cards and gives producers the tools to create new cards, edit existing cards, and search for cards. Producers can also preview the cards to finalize them before publication, and then add the cards to the “Drafts” and “Timeline” columns.
     p
@@ -60,7 +60,7 @@ title: NBC Primetime Campanion App
     p
      | The left column is the “Timeline.” The Timeline is the dashboard of the app and reflects what is seen by users. It is made up of cards that have been assigned to a specific time for display within the Primetime Companion. Cards may be assigned to multiple times within the Timeline. For example, it is very likely that a more generic poll or a gallery may run multiple times in the same night or across multiple days. Producers may also want to continue to offer content that is related to more popular sports or athletes. The Composer gives producers the flexibility to run content when and where it is likely to engage the most viewers, down to the second.
 
-    div.casestudy-image= image_tag "/images/composer-shaun-white.png"
+    div.casestudy-image= image_tag "composer-shaun-white.png"
 
     h2 Conclusion
     p
@@ -78,6 +78,4 @@ title: NBC Primetime Campanion App
      | We recognized that Composer, the CMS tool we built to manage this feed of various content types has more applications than this one product experience. We see that almost all content driven sites use so many types of media and yet very few consolidated them into a single stream of content like our Companion App. What if content could be ingested from various sources, and then managed in a central location using the Composer as the interface to do put it altogether in a presentable and meaningful way. New ideas brewing.
 
     div.casestudy__footer-stamp
-      a href='/index.html'
-        = image_tag "/images/icon_pairshaped_stamp.svg"
-
+      = link_to image_tag("icon_pairshaped_stamp.svg"), '/'
