@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="32px" height="30px" viewBox="0 0 32 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12081) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_email</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="icon_email" sketch:type="MSLayerGroup" fill="#F8E71C">
+            <g id="Group" sketch:type="MSShapeGroup">
+                <path d="M1.286,11.465 C0.601,11.729 0.115,12.344 0.018,13.071 C-0.079,13.798 0.231,14.52 0.824,14.951 L7.316,19.675 L30.374,1.534 L9.985,21.621 L18.86,28.079 C19.423,28.489 20.153,28.612 20.824,28.409 C21.494,28.205 22.028,27.696 22.268,27.041 L31.762,1.056 C31.858,0.791 31.789,0.496 31.589,0.299 C31.391,0.103 31.096,0.04 30.831,0.142 L1.286,11.465 L1.286,11.465 Z" id="Shape"></path>
+                <path d="M5.774,21.246 L5.829,21.547 L7.089,28.437 C7.184,28.949 7.526,29.377 8.001,29.584 C8.478,29.79 9.026,29.746 9.462,29.465 C11.217,28.333 13.509,26.831 13.447,26.743 L5.774,21.246 L5.774,21.246 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

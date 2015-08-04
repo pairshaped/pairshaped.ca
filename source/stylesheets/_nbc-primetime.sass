@@ -1,0 +1,118 @@
+// NBC Primetime Companion //
+.nbc-container
+  width: 100%
+  background-color: white
+  font-family: $font-primary
+
+.blog-header
+  height: 650px
+  width: 100%
+  background-image: url("/images/nbc-primetime_header.jpg")
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+  overflow: hidden
+  position: relative
+  &-container
+    position: relative
+    width: $breakpoint-desktop
+    height: 100%
+    margin-left: auto
+    margin-right: auto
+    //border: 1px solid blue 
+    @media (max-width:$breakpoint-desktop)
+      width: 90%
+  &-details
+    display: inline-block
+    vertical-align: baseline
+    position: absolute
+    bottom: 60px
+    //border: 1px solid green
+    @media (max-width:$breakpoint-desktop)
+    &__title
+      display: block
+      box-sizing: border-box
+      bottom: 0
+      font-size: 8vw
+      font-weight: 800
+      color: white
+      line-height: 8vw
+      color: $nbcblue-500
+      @media (min-width:$breakpoint-desktop)
+        font-size: 100px 
+        line-height: 90px
+      @media (max-width:$breakpoint-tablet)
+        font-size: 40px 
+        line-height: 40px
+    &__subtitle
+      display: block
+      font-size: 20px
+      font-weight: 300
+      margin: 20px 0 0 5px
+      color: white
+      letter-spacing: 0.40px
+      line-height: 30px
+      opacity: 0.8
+  
+.casestudy-body
+  position: relative
+  width: $breakpoint-tablet
+  height: 100%
+  margin-top: 40px
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 100px
+  background-color: white
+  //border: 1px solid blue
+  @media (max-width:$breakpoint-desktop)
+    width: 90%
+  p
+    margin: 40px 0 0 0
+    font-size: 1em
+    font-weight: 400
+    line-height: 1.8em
+    color: $black-600
+    @media (max-width:$breakpoint-mobile)
+      font-size: 0.8em
+      margin: 20px 0 0 0
+
+  h2
+    margin: 80px 0 0 0
+    font-size: 2em
+    font-weight: 700
+    line-height: 1em
+    list-style-type: square
+    color: $black-900
+    @media (max-width:$breakpoint-mobile)
+      margin: 40px 0 0 0
+  ul
+    margin: 40px 0
+    font-size: 1em
+    font-weight: 400
+    line-height: 1.8em
+    color: $black-600
+    list-style-type: square
+    @media (max-width:$breakpoint-mobile)
+      font-size: 0.8em
+      margin: 20px 0 0 0
+    li
+      margin: 0 0 20px 0
+
+.casestudy-image
+  img
+    margin: 60px auto
+    width: 70%
+    display: block
+    //border: 1px solid red
+    @media (max-width:$breakpoint-mobile)
+      width: 90%
+
+.casestudy__footer-stamp
+  img
+    display: block
+    margin: 80px auto 0 auto
+    width: 50px
+    height: auto
+    &:hover
+      transition: all 0.5s ease
+      opacity: 0.7

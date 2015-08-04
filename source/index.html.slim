@@ -1,54 +1,82 @@
-.section.hero
-  .container
-    .row
-      .one-half.column
-        h4.hero-heading
-          | Stop coding non-responsive sites. Let users view sites from anywhere.
-        a.button.button-primary[href="http://getskeleton.com"]
-          | Try Skeleton
-      .one-half.column.phones
-        = image_tag("iphone.png", class: "phone")
-        = image_tag("iphone.png", class: "phone")
-.section.values
-  .container
-    .row
-      .one-third.column.value
-        h2.value-multiplier
-          | 67%
-        h5.value-heading
-          | Purchase Increase
-        p.value-description
-          | Percentage of users more likely to purchase on mobile friendly site.
-      .one-third.column.value
-        h2.value-multiplier
-          | 90%
-        h5.value-heading
-          | Multi-device Users
-        p.value-description
-          | Most of the world accesses the internet on multiple devices.
-      .one-third.column.value
-        h2.value-multiplier
-          | 66%
-        h5.value-heading
-          | Sad Users
-        p.value-description
-          | Percentage of users that are frustrated with page load times.
-.section.get-help
-  .container
-    h3.section-heading
-      | Need help getting started?
-    p.section-description
-      | Skeleton is an amazingly easy place to start with responsive development. If you want to learn more, just visit the documentation!
-    a.button.button-primary href="http://getskeleton.com"
-      | View Skeleton Docs
-.section.categories
-  .container
-    h3.section-heading
-      | Responsive Images
-    p.section-description
-      | Skeleton images sit easily in grid with .u-max-full-width class. I suggest exploring solution to serving different images based on device size.
-    .row
-      .one-half.column.category
-        = image_tag "placeholder.png", class: "u-max-full-width"
-      .one-half.column.category
-        = image_tag "placeholder.png", class: "u-max-full-width"
+---
+title: Pair Shaped
+---
+
+div.site-container
+
+  div.homepage-main-content-container
+    div.logo
+      a.logo__link href='/index.html'
+        = image_tag "images/logo_pairshaped.svg"
+
+    div.horizontal-rule--mini
+
+    div.main-intro Crafting beautiful software that people use everyday on any screen
+
+    div.elevator-pitch
+     | We formed our company with a singular vision, to create beautiful software at the highest possible level of quality and craftsmanship
+
+    div.horizontal-rule--mini
+
+    div.contact-pitch
+      | Currently accepting new projects. Contact us for samples of previous work. We’d love to hear from you.
+
+    div.contact
+      div.contact__email-link 
+        div.contact__email-link-icon= image_tag "images/icon_email.svg"
+        a href='mailto:info@pairshaped.ca' info@pairshaped.ca
+      div.contact__phone-link 
+        div.contact__phone-link-icon= image_tag "images/icon_telephone.svg"
+        a href='tel:4169937354' (416) 993-7354
+
+    div.footer
+      div.footer__horizontal-rule
+      div.footer__copyright 
+        | Copyright 2015 © PAIR SHAPED INC.
+        br/
+        | 329 A - 121 Charles St. Kitchener ON, N2G 1H6
+      div.footer__social-buttons
+        div.footer__social-buttons-icon
+          a href="https://github.com/pairshaped" target='_blank'
+            = image_tag "images/icon_git.svg"
+        div.footer__social-buttons-icon
+           a href="https://dribbble.com/pairshaped" target='_blank'
+            = image_tag "images/icon_dribbble.svg"
+
+  div.homepage-sidebar-container
+
+    div.clients__section Featured Work
+    div.horizontal-rule--mini
+
+    div.clients__client-name 
+      a href='http://tsn.ca' target='_blank' TSN.ca
+    div.clients__project-type UX Design
+    div.clients__project-description Massive overhaul of the online presence of the most iconic sports media brand in Canada
+
+    div.clients__client-name
+      a href='/nbcprimetime.html'  NBC Olympics Primetime
+    div.clients__project-type iOS and Andriod Native Apps
+    div.clients__project-description Companion Apps delivering real-time curated content sync'd with on air programing during the most highly trafficked sports event of the year
+
+    div.clients__client-name
+      a href='http://www.curling.ca/scoreboard' target='_blank' Curling Canada
+    div.clients__project-type Web Application - Curlcast
+    div.clients__project-description Statistics capture and distribution software for the official governing body, Curling Canada
+
+    div.clients__client-name
+      a href='http://poy.tsn.ca' target='_blank' NHL Play of the Year
+    div.clients__project-type Web Application 
+    div.clients__project-description Real-time voting application for TSN's NHL Play of the Year program. 5,000,000 votes and counting.
+
+
+    div.clients__client-name  
+      a href='http://ticats.ca' target='_blank' Hamilton Tiger-Cats
+    div.clients__project-type Responsive Website Redesign
+    div.clients__project-description Responsive redesign for Hamilton premier Football club with real-time stats presentation 
+
+    div.clients__client-name
+     a href='http://golfcanada.ca' target='_blank'  Golf Canada
+    div.clients__project-type Responsive Website Redesign
+    div.clients__project-description Responsive redesign of one of Canada's largest golf website
+  div.clearfix
+  

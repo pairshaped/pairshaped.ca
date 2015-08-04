@@ -1,0 +1,28 @@
+html, body
+  margin: 0
+  padding: 0
+  @media (max-width: $breakpoint-desktop)
+    height: 100%
+  @media (min-width: $breakpoint-desktop)
+    height: 100%
+
+.site-container
+  +span(12 of 12 no-gutters)
+
+.homepage
+  &-main-content
+    &-container
+      +span(12 of 12)
+      @media (min-width: $breakpoint-desktop)
+        +span(8 of 12)
+        min-height: 100%
+  &-sidebar
+    &-container
+      +span(12 of 12)
+      min-height: 100%
+      background-color: $pairshaped-600
+      @media (min-width: $breakpoint-desktop)
+        +span(4 of 12)
+
+
+
