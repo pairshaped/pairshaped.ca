@@ -63,14 +63,15 @@
 // Footer Common // 
 
 .footer
+  +pull(gutters())
+  +span(12 of 12)
+  position: absolute
+  bottom: 0
+  padding-bottom: 20px
   display: block
   clear: both
-  padding-bottom: 20px
-  @media (max-width: $breakpoint-desktop)
-    +pull(gutters())
-    +span(12 of 12)
-    position: absolute
-    bottom: 0
+  @media (min-width: $breakpoint-desktop)
+    +span(8 of 12)
   &__horizontal-rule
     @extend %footer__horizontal-rule
   &__copyright
