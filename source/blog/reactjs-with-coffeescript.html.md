@@ -1,5 +1,4 @@
 ---
-layout: blog
 title: "Using CoffeeScript with ReactJS"
 date: 2015-02-03 9:23
 categories: [programming, javascript, coffeescript, reactjs]
