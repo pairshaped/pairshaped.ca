@@ -24,5 +24,21 @@ html, body
       @media (min-width: $breakpoint-desktop)
         +span(4 of 12)
 
+.team
+  +span(12 of 12 no-gutters)
+  &__horizontal-rule
+    +span(12 of 12 no-gutters)
+  &__header
+    +span(12 of 12 no-gutters)
+  &__bio
+    +clearfix
+    +span(6 of 12 no-gutters)
+    &-image
+      max-width: 100%
+      height: auto
+      margin-bottom: 10px
+    &-name
+    &-position
+      margin-bottom: 20px
 
 
