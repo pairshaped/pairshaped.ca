@@ -65,13 +65,11 @@
 .footer
   +pull(gutters())
   +span(12 of 12)
-  position: absolute
-  bottom: 0
   padding-bottom: 20px
   display: block
   clear: both
   @media (min-width: $breakpoint-desktop)
-    +span(8 of 12)
+    +span(12 of 12 no-gutters)
   &__horizontal-rule
     @extend %footer__horizontal-rule
   &__copyright
