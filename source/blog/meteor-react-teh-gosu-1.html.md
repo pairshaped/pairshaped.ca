@@ -8,8 +8,9 @@ This is part one of a series of posts that go through creating a new web app wit
 
 ## Prerequisites
 
-1. Meteor [https://www.meteor.com/install](https://www.meteor.com/install)
-2. Nodejs [https://nodejs.org/en/](https://nodejs.org/en/)
+1. [Meteor](https://www.meteor.com/install)
+2. [Nodejs](https://nodejs.org/en/)
+3. OSX, Linux, or Cygwin.
 
 ## Why Metor?
 
@@ -34,7 +35,7 @@ As it turns out, having your UI code in your views when they are small (componen
 Don't take our word for it though.
 Give it a whirl for yourself.
 There's a decent chance you'll agree.
-[https://facebook.github.io/react/docs/getting-started.html](https://facebook.github.io/react/docs/getting-started.html)
+[Getting Started with React](https://facebook.github.io/react/docs/getting-started.html)
 
 ## The Project Requirements
 
@@ -82,9 +83,8 @@ Adding libraries to Meteor is super simple:
 
 We personally prefer CoffeeScript over JavaScript due to the readability of significant whitespace.
 There's a popular opinion at the moment that CoffeeScript is obsolete now that we have ES6 and Babel.
-I disagree because I think browsers will eventually support WebAssembly.
+I disagree because I think browsers will eventually support [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly).
 Once they do we'll see even more JavaScript alternatives.
-[https://en.wikipedia.org/wiki/WebAssembly](https://en.wikipedia.org/wiki/WebAssembly)
 
     meteor add coffeescript
 
