@@ -125,4 +125,89 @@ The equivalent in JSX without our library would look like this:
       }
     });
 
+### Project Structure
 
+Now is as good a time as any to setup our basic structure for the application.
+Meteor has a convention where any code that's placed within a directory named "client" will only run on the client.
+And naturally code in a directory names "server" will only run on the server.
+
+We want the following directories under the root of the project:
+
+* lib: Common library functions. These are loaded before the other directories.
+* client: Code that should only be run on the client (browser).
+* server: Code that should only be run on the server.
+* public: Only served to the public. We'll put our robots.txt and images in here.
+
+    mkdir lib client server public
+
+Let's remove the initial files that meteor created. We don't need them.
+
+    rm tehgosu.*
+
+Create a new HTML file in the client directory.
+Since we're using React for our views, this will be the only HTML file we need.
+
+    vi client/index.html
+
+In this HTML file we just need a div element which react will replace once it's loaded.
+
+    <head>
+      <title>Teh Gosu</title>
+    </head>
+
+    <body>
+      <div id="app">Loading...</div>
+    </body>
+
+Now we need to attach our React views.
+Create a new CoffeeScript file in the client directory.
+
+    vi client/index.coffee
+
+In this CoffeeScript file we load up our React views and attache them to the DOM.
+
+    Meteor.startup ->
+      React.render(
+        App({}),
+        document.getElementById 'app'
+      )
+
+We're referencing an object called "App" within the Render method, so we need to build that.
+Create a new CoffeeScript file in the client directory for it.
+
+    vi client/app.coffee
+
+Our new app.coffee is going to hold our top level React component code.
+
+    { h1 } = React.DOM
+
+    @App = Component.create
+      render: ->
+        h1 {},
+          'Teh Gosu!'
+
+We're keeping it simple. All we're doing is rendering an h1 tag with the text "Teh Gosu!".
+Notice the @ symbol prefix to the App declaration.
+Again this is because of CoffeeScript's automatic clojure and the fact that Meteor needs the object to be on this to be accessible outside the file.
+
+At this point we should have a working React + Meteor application. Run the server with:
+
+    meteor
+
+Then visit http://localhost:3000
+
+You should see "Teh Gosu!".
+
+Your directory structure should be:
+
+    - client
+      - app.coffee
+      - index.coffee
+      - index.html
+    - lib
+      - component.coffee
+    - server
+    - public
+
+This concludes part one of our Meteor + React series.
+In part two we'll add a Router and some basic views.
