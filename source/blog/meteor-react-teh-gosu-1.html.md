@@ -203,14 +203,14 @@ You should see __Teh Gosu!__.
 
 Your directory structure should be:
 
-    - client
-      - app.coffee
-      - index.coffee
-      - index.html
-    - lib
-      - component.coffee
-    - server
-    - public
+    client
+      app.coffee
+      index.coffee
+      index.html
+    lib
+      component.coffee
+    server
+    public
 
 This concludes part one of our Meteor + React series.
-In part two we'll add a Router and some basic views.
+In part two we'll add some data and the match view.
