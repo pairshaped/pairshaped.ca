@@ -8,8 +8,8 @@ This is part one of a series of posts that go through creating a new web app wit
 
 ## Prerequisites
 
-1. Meteor https://www.meteor.com/install
-2. Nodejs https://nodejs.org/en/
+1. Meteor [https://www.meteor.com/install](https://www.meteor.com/install)
+2. Nodejs [https://nodejs.org/en/](https://nodejs.org/en/)
 
 ## Why Metor?
 
@@ -33,7 +33,7 @@ As it turns out, having UI code in your views when your views are small (compone
 
 Don't take our word for it though, give it a whirl for yourself.
 There's a decent chance you'll agree.
-https://facebook.github.io/react/docs/getting-started.html
+[https://facebook.github.io/react/docs/getting-started.html](https://facebook.github.io/react/docs/getting-started.html)
 
 ## The Project Requirements
 
@@ -69,7 +69,7 @@ This creates a basic Meteor application that we can run right away:
     cd tehgosu
     meteor
 
-Then visit http://localhost:3000
+Then visit [http://localhost:3000](http://localhost:3000)
 
 ### React and CoffeeScript
 
@@ -83,7 +83,7 @@ We personally prefer CoffeeScript over JavaScript due to the readability of sign
 There's a popular opinion at the moment that CoffeeScript is obsolete now that we have ES6 and Babel.
 I disagree because I think browsers will eventually support WebAssembly.
 Once they do we'll see even more JavaScript alternatives.
-https://en.wikipedia.org/wiki/WebAssembly
+[https://en.wikipedia.org/wiki/WebAssembly](https://en.wikipedia.org/wiki/WebAssembly)
 
     meteor add coffeescript
 
@@ -194,7 +194,7 @@ At this point we should have a working React + Meteor application. Run the serve
 
     meteor
 
-Then visit http://localhost:3000
+Then visit [http://localhost:3000](http://localhost:3000)
 
 You should see "Teh Gosu!".
 
