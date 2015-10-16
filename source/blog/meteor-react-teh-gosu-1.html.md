@@ -16,11 +16,11 @@ This is part one of a series of posts that go through creating a new web app wit
 We're always on the lookout for new methodologies in the web stack, and Meteor is one we've been keeping an eye on for a while.
 Here's what we like about it:
 
-* Nodejs on the server performs significantly better than Ruby / Rails.
-* Websockets consume significantly less bandwidth than REST since there's no need to HTTP headers.
-* No need to constantly customize APIs (also something GraphQL solves).
+* Nodejs on the server performs significantly better than some other dynamic stacks like Ruby on Rails.
+* Websockets consume significantly less bandwidth than REST since there is no need to send HTTP headers every time.
+* No need to constantly customize APIs (also something GraphQL would solve).
 * Responding to data changes is straightforward via pub / sub. With React this is even easier.
-* Updating data is also straightforward via Meteor methods.
+* Updating data is straightforward via Meteor methods.
 
 ## Why React
 
@@ -29,23 +29,24 @@ Declaritive UI programming is where it's at.
 
 Code next to Markup was a bad idea right?
 Not really.
-As it turns out, having UI code in your views when your views are small (components) makes a ton of sense.
+As it turns out, having your UI code in your views when they are small (components) makes a ton of sense.
 
-Don't take our word for it though, give it a whirl for yourself.
+Don't take our word for it though.
+Give it a whirl for yourself.
 There's a decent chance you'll agree.
 [https://facebook.github.io/react/docs/getting-started.html](https://facebook.github.io/react/docs/getting-started.html)
 
 ## The Project Requirements
 
-We're going to take you through building a Hot or Not style application tailored to sports and esports plays.
+We're going to step through building a Hot or Not style of application tailored to sports plays.
 
 The three main components are:
 
-### Submit a Play
+#### Submit a Play
 
 User should be able to submit a new play. The play will have a title, description, and Youtube URL.
 
-### Vote on Plays
+#### Vote on Plays
 
 User should be able to see two plays and vote for one of them.
 
@@ -53,7 +54,7 @@ Once user has voted for a play, they will be replaced with two new plays that th
 
 There is no limit to the number of plays the user can vote on, however the user may not vote on the same play more than once.
 
-### Leaderboard
+#### Leaderboard
 
 User should see a list of top ten plays with the most votes, ordered by number of votes descending.
 This list will update in real time as votes are added.
@@ -129,7 +130,7 @@ The equivalent in JSX without our library would look like this:
 
 Now is as good a time as any to setup our basic structure for the application.
 Meteor has a convention where any code that's placed within a directory named "client" will only run on the client.
-And naturally code in a directory names "server" will only run on the server.
+And naturally code in a directory named "server" will only run on the server.
 
 We want the following directories under the root of the project:
 
@@ -143,6 +144,8 @@ We want the following directories under the root of the project:
 Let's remove the initial files that meteor created. We don't need them.
 
     rm tehgosu.*
+
+### Time to Write Some Code
 
 Create a new HTML file in the client directory.
 Since we're using React for our views, this will be the only HTML file we need.
