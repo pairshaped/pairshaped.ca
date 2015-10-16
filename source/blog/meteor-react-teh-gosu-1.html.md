@@ -100,14 +100,14 @@ In component.coffee we're going to add a function that we'll be calling instead 
       create: (spec) ->
         React.createFactory React.createClass(spec)
 
-Notice the @ symbol used to declare our Component object?
+Notice the __@__ symbol used to declare our Component object?
 CoffeeScript places our code in a closure so as not to pollute the global namespace.
-In Meteor we need to attach our object to the global namespace using this (@ = this.).
+In Meteor we need to attach our object to the global namespace using __this__ (@ = this.).
 This is a little counter intuitive compared to CommonJS style requires, and maybe some day we'll have a better alternative.
 
-For now @Component makes our object accessible throughout the application.
+For now __@Component__ makes our object accessible throughout the application.
 
-This Component object will allow us to create a React component in CoffeeScript like so:
+Now we can create a React component in CoffeeScript like so:
 
     TestComponent = Component.create
       render: ->
@@ -129,8 +129,8 @@ The equivalent in JSX without our library would look like this:
 ### Project Structure
 
 Now is as good a time as any to setup our basic structure for the application.
-Meteor has a convention where any code that's placed within a directory named "client" will only run on the client.
-And naturally code in a directory named "server" will only run on the server.
+Meteor has a convention where any code that's placed within a directory named __client__ will only run on the client.
+And naturally code in a directory named __server__ will only run on the server.
 
 We want the following directories under the root of the project:
 
@@ -175,7 +175,7 @@ In this CoffeeScript file we load up our React views and attache them to the DOM
         document.getElementById 'app'
       )
 
-We're referencing an object called "App" within the Render method, so we need to build that.
+We're referencing an object called __App__ within the Render method, so we need to build that.
 Create a new CoffeeScript file in the client directory for it.
 
     vi client/app.coffee
@@ -189,9 +189,9 @@ Our new app.coffee is going to hold our top level React component code.
         h1 {},
           'Teh Gosu!'
 
-We're keeping it simple. All we're doing is rendering an h1 tag with the text "Teh Gosu!".
-Notice the @ symbol prefix to the App declaration.
-Again this is because of CoffeeScript's automatic closure and the fact that Meteor needs the object to be on this to be accessible outside the file.
+We're keeping it simple. All we're doing is rendering an h1 tag with the text __Teh Gosu!__.
+Notice the __@__ symbol prefix to the App declaration.
+Again this is because of CoffeeScript's automatic closure and the fact that Meteor needs the object to be on __this__ to be accessible outside the file.
 
 At this point we should have a working React + Meteor application. Run the server with:
 
@@ -199,7 +199,7 @@ At this point we should have a working React + Meteor application. Run the serve
 
 Then visit [http://localhost:3000](http://localhost:3000)
 
-You should see "Teh Gosu!".
+You should see __Teh Gosu!__.
 
 Your directory structure should be:
 
