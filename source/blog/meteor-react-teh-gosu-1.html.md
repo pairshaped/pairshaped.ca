@@ -33,9 +33,8 @@ Not really.
 As it turns out, having your UI code in your views when they are small (components) makes a ton of sense.
 
 Don't take our word for it though.
-Give it a whirl for yourself.
+[Give it a whirl for yourself](https://facebook.github.io/react/docs/getting-started.html)
 There's a decent chance you'll agree.
-[Getting Started with React](https://facebook.github.io/react/docs/getting-started.html)
 
 ## The Project Requirements
 
@@ -83,7 +82,7 @@ Adding libraries to Meteor is super simple:
 
 We personally prefer CoffeeScript over JavaScript due to the readability of significant whitespace.
 There's a popular opinion at the moment that CoffeeScript is obsolete now that we have ES6 and Babel.
-I disagree because I think browsers will eventually support [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly).
+I disagree because I think browsers will eventually support [WebAssembly](https://brendaneich.com/2015/06/from-asm-js-to-webassembly/).
 Once they do we'll see even more JavaScript alternatives.
 
     meteor add coffeescript
