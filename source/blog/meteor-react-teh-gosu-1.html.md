@@ -101,7 +101,7 @@ In component.coffee we're going to add a function that we'll be calling instead 
         React.createFactory React.createClass(spec)
 
 Notice the @ symbol used to declare our Component object?
-CoffeeScript places our code in a clojure so as not to pollute the global namespace.
+CoffeeScript places our code in a closure so as not to pollute the global namespace.
 In Meteor we need to attach our object to the global namespace using this (@ = this.).
 This is a little counter intuitive compared to CommonJS style requires, and maybe some day we'll have a better alternative.
 
@@ -191,7 +191,7 @@ Our new app.coffee is going to hold our top level React component code.
 
 We're keeping it simple. All we're doing is rendering an h1 tag with the text "Teh Gosu!".
 Notice the @ symbol prefix to the App declaration.
-Again this is because of CoffeeScript's automatic clojure and the fact that Meteor needs the object to be on this to be accessible outside the file.
+Again this is because of CoffeeScript's automatic closure and the fact that Meteor needs the object to be on this to be accessible outside the file.
 
 At this point we should have a working React + Meteor application. Run the server with:
 
