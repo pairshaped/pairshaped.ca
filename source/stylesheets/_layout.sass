@@ -1,26 +1,30 @@
 html, body
   margin: 0
   padding: 0
-  @media (max-width: $breakpoint-desktop)
-    height: 100%
-  @media (min-width: $breakpoint-desktop)
-    height: 100%
+  min-height: 100%
+  height: auto!important
 
 .site-container
   +span(12 of 12 no-gutters)
-  
+
 .homepage
   &-main-content-container
     +span(12 of 12)
     @media (min-width: $breakpoint-desktop)
-      +span(8 of 12)
-      min-height: 100%
+      +span(8 of 12 no-gutters)
+      float: none
+
   &-sidebar-container
     +span(12 of 12)
     background-color: $pairshaped-600
     min-height: 100%
     @media (min-width: $breakpoint-desktop)
-      +span(4 of 12)
+      +span(4 of 12 no-gutters)
+      position: absolute
+      float: none
+      top: 0
+      right: 0
+
 
 .team
   +clearfix
