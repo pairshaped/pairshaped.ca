@@ -1,10 +1,9 @@
-# creative-sandbox
-Sandbox for noobs
+# Pair Shaped Site
 
 ## Installation
 
-1. git clone git@github.com:pairshaped/creative-sandbox.git
-2. cd creative-sandbox
+1. git clone git@github.com:pairshaped/pairshaped.ca.git
+2. cd pairshaped.ca
 3. bundle
 
 ## Running
