@@ -1,7 +1,7 @@
 ---
 title: "Let's Build Something With Meteor and React - Part 1"
-date: 2015-10-15 15:02
-categories: [programming, javascript, meteor, reactjs]
+date: 2015-10-15
+categories: [programming, javascript, meteor, reactjs, coffeescript]
 ---
 
 This is part one of a series of posts that go through creating a new web app with Meteor and React.
