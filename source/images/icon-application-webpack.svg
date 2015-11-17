@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="75px" height="84px" viewBox="0 0 75 84" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.4 (15588) - http://www.bohemiancoding.com/sketch -->
+    <title>Polygon 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="About-Us" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="About-Us---Desktop" sketch:type="MSArtboardGroup" transform="translate(-661.000000, -2194.000000)" fill="#383838">
+            <g id="Our-Development-Stack" sketch:type="MSLayerGroup" transform="translate(218.000000, 1960.000000)">
+                <g id="Applications" transform="translate(0.000000, 120.895658)" sketch:type="MSShapeGroup">
+                    <g id="Webpack" transform="translate(393.000000, 114.000000)">
+                        <path d="M87.5,0 L124.02,21.58 L124.02,61.42 L87.5,83 L50.98,63.08 L50.98,21.58 L87.5,0 Z M88.3333333,19 L106.666667,30.6666667 L106.666667,52.3333333 L88.3333333,64 L68.3333333,52.3333333 L68.3333333,30.6666667 L88.3333333,19 Z" id="Polygon-1"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,128 +1,13 @@
-// - - - - - - Placeholders - - - - - - //
+@mixin materialicon($icon)
+  font-family: "Material-Design-Iconic-Font"
+  content: $icon
 
-%clearfix
-  clear: both
-  display: block
+@mixin fontawesome($icon)
+  font-family: "fontawesome-webfont"
+  content: $icon
 
-%defaults-horizontal-rule
-  margin: 40px 0
-  width: 100%
-  height: 1px
-  background-color: white
-  opacity: 0.3
-
-%contact-link
-  display: block
-  margin: 0 0 3px 0
-  font-weight: 300
-  font-size: 1.1em
-  letter-spacing: 0.4px
-  text-decoration: none
-
-%contact-link-a
-  color: white
-  text-decoration: none
-  &:hover
-    transition: all 0.5s ease
-    color: $rocketpiss-500
-    cursor: pointer
-
-%contact-link-icon
-  display: inline
-  img
-    //margin: 0 10px 0 0
-    display: inline
-    width: 13px
-    height: 13px
-    margin: 0 7px 0 0
-
-
-
-
-
-// - - - - - - Styles - - - - - - //
-.clearfix
-  @extend %clearfix
-
-.index
-  background-color: $pairshaped-500
-
-.site-container
-  position: relative
-  margin: 0 auto
-  padding-bottom: 100px
-  background-color: $pairshaped-600
-  font-family: $font-primary
-  @media (min-width: $breakpoint-desktop)
-    height: inherit
-    padding-bottom: 0
-    background-color: $pairshaped-500
-.homepage-main-content-container
-  background-color: $pairshaped-500
-
-.horizontal-rule
-  @extend %defaults-horizontal-rule
-  &--mini
-    @extend %defaults-horizontal-rule
-    width: 60px
-
-.main-intro
-  font-size: 3em
-  font-weight: 600
-  color: white
-  line-height: 60px
-  @media (max-width:$breakpoint-desktop)
-    font-size: 2em
-    line-height: 40px
-
-.elevator-pitch
-  margin: 20px 0 0 0
-  font-size: 20px
-  font-weight: 300
-  color: white
-  letter-spacing: 0.40px
-  line-height: 40px
-  opacity: 0.6
-  @media (max-width:$breakpoint-mobile)
-    line-height: 27px
-
-.contact-pitch
-  margin: 0 0 20px 0
-  font-style: italic
-  font-size: 1em
-  font-weight: 300
-  color: white
-  line-height: 20px
-  letter-spacing: 0.20px
-
-.contact
-  margin: 0 0 40px 0
-  &__email-link, &__phone-link
-    @extend %contact-link
-    a
-      @extend %contact-link-a
-    &-icon
-      @extend %contact-link-icon
-
-.team
-  &__horizontal-rule
-    @extend .horizontal-rule
-  &__header
-    font-size: 1.4em
-    font-weight: 600
-    color: white
-    line-height: 60px
-  &__bio
-    &-name
-      color: white
-      font-family: $font-primary
-      font-size: 16px
-      font-weight: 300
-    &-position
-      color: white
-      opacity: 0.7
-      font-family: $font-primary
-      font-size: 10px
-      font-weight: 300
-      letter-spacing: 1px
-
+@mixin clearfix
+  &:after
+    content: ""
+    display: table
+    clear: both

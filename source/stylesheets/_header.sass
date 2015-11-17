@@ -1,0 +1,96 @@
+// - - - -  Header Styling - - - - //
+
+.header
+  +clearfix
+  padding: 20px 20px 0 20px
+  background-color: $black-500
+  &__logo
+    float: left
+    width: 180px
+    margin-top: -3px
+    cursor: pointer
+
+  &__mobile-menu
+    cursor: pointer
+  &__nav-item
+    text-align: center
+    color: $black-200
+    font-size: 12px
+    letter-spacing: 1.29px
+    line-height: 14px
+    text-decoration: none
+    text-transform: uppercase
+    &:hover
+      color: white
+
+
+/* Effect 1: Brackets */
+
+.header-hover
+  a
+    &:before, &:after
+      opacity: 0
+      -webkit-transition: -webkit-transform 0.3s, opacity 0.2s
+      -moz-transition: -moz-transform 0.3s, opacity 0.2s
+      transition: transform 0.3s, opacity 0.2s
+      color: $brand-primary-500
+      font-size: 14px
+
+    &:before
+      content: '['
+      -webkit-transform: translateX(20px)
+      -moz-transform: translateX(20px)
+      transform: translateX(20px)
+
+    &:after
+      content: ']'
+      -webkit-transform: translateX(-20px)
+      -moz-transform: translateX(-20px)
+      transform: translateX(-20px)
+
+    &:hover, &:focus
+      &:before, &:after
+        opacity: 1
+        -webkit-transform: translateX(0px)
+        -moz-transform: translateX(0px)
+        transform: translateX(0px)
+// - - - - Header Layout - - - - //
+.header-container
+  +clearfix
+  margin: 0 auto
+  @media (min-width: $breakpoint-tablet)
+    max-width: $breakpoint-tablet
+  @media (min-width: $breakpoint-desktop)
+    max-width: $breakpoint-desktop
+
+.header
+  +clearfix
+  position: relative
+  z-index: 5000
+  top: 0
+  left: 0
+  right: 0
+  height: 60px
+  &__mobile-menu
+    float: right
+    margin-top: 2px
+    @media (min-width: $breakpoint-tablet)
+      display: none
+  &__tablet-menu
+    display: none
+    @media (min-width: $breakpoint-tablet)
+      display: inline
+  &__nav-list
+    float: right
+  &__nav-item
+    display: inline-block
+
+/* Effect 1: Brackets */
+.header-hover
+  a
+    &:before, &:after
+      display: inline-block
+    &:before
+      margin-right: 10px
+    &:after
+      margin-left: 10px
