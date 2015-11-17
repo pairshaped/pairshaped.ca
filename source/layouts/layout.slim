@@ -9,5 +9,48 @@ html
     title= current_page.data.title || "Pair Shaped"
     = stylesheet_link_tag "all"
     = javascript_include_tag "all"
+
+.header
+  .header-container
+    = link_to image_tag("logo_pairshaped.svg"), '/', class: 'header__logo'
+
+    .header__mobile-menu
+      = image_tag("menu-icon.svg")
+    .header__tablet-menu
+      .header__nav-list.header-hover
+        a.header__nav-item href="/" Home
+        a.header__nav-item href="/work" Work
+        a.header__nav-item href="/blog" Blog
+        a.header__nav-item href="/about" About
+        a.header__nav-item href="/contact" Contact
+
   body( class=page_classes )
     = yield
+
+footer.content-info
+  .footer
+    .container
+      .footer__contact
+        .footer__contact-title Contact Us
+        .footer__contact-address
+          | 321A - 121 Charles S. W.</br>Kitchener, ON N2G 1H6</br>
+          a href="mailto:info@pairshaped.ca" info@pairshaped.ca
+          a href="tel:+14169937354" (416) 993-7354
+        .footer__contact-copyright &copy; 2015 Pair Shaped Inc.
+
+      .footer__sub
+        .footer__sub-title Inside Pair Shaped
+        ul.footer__sub-list
+          li.footer__sub-link Philosophy & Process
+          li.footer__sub-link Our Team
+          li.footer__sub-link Development Stack
+          li.footer__sub-link Careers
+      .footer__social
+        .footer__social-title Connect
+        ul.footer__social-list
+          li.footer__social-link--github GitHub
+          li.footer__social-link--dribbble Dribbble
+          li.footer__social-link--linkedin LinkedIn
+          li.footer__social-link--codepen CodePen
+
+      .footer__top-link Top
