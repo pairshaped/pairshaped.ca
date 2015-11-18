@@ -1,86 +1,114 @@
-// Keyframes // 
+// - - - - Footer Styling - - - - //
 
-@-webkit-keyframes hvr-pop 
-  50% 
-    -webkit-transform: scale(1.4)
-    transform: scale(1.4)
-
-@keyframes hvr-pop 
-  50% 
-    -webkit-transform: scale(1.4)
-    transform: scale(1.4)
-
-// Placeholders //
-
-%footer__horizontal-rule
-  margin: 20px 0
-  width: 100%
-  height: 1px
-  background-color: white
-  opacity: 0.3
-
-%footer__copyright
-  float: left
-  display: inline-block
-  color: white
+// Placeholders
+%footer-title
+  margin-top: 20px
+  color: $black-400
   font-size: 12px
-  font-weight: 300
-  letter-spacing: 0.2px
-  line-height: 17px
-  opacity: 0.5
+  letter-spacing: 1.29px
+  line-height: 14px
+  text-transform: uppercase
 
-%footer__social-buttons
-  float: right
-  display: inline-block
-  outline: 0
-  border: 0
-  cursor: pointer
+%footer-body
+  margin-top: 10px
+  color: $black-200
+  font-size: 12px
+  line-height: 16px
+  text-decoration: none
 
-%footer__social-buttons-icon
-  width: 15px
-  height: 15px
-  margin: 0 0 0 10px
-  display: inline-block
-  vertical-align: middle
-  outline: 0
-  border: 0
-  -webkit-transform: translateZ(0)
-  transform: translateZ(0)
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0)
-  -webkit-backface-visibility: hidden
-  backface-visibility: hidden
-  -moz-osx-font-smoothing: grayscale
-  &:hover
-    -webkit-animation-name: hvr-pop
-    animation-name: hvr-pop
-    -webkit-animation-duration: 0.3s
-    animation-duration: 0.3s
-    -webkit-animation-timing-function: linear
-    animation-timing-function: linear
-    -webkit-animation-iteration-count: 1
-    animation-iteration-count: 1
-
-// Footer Common // 
+// Styling
 
 .footer
-  +pull(gutters())
-  +span(12 of 12)
-  padding-bottom: 20px
-  display: block
-  clear: both
-  @media (min-width: $breakpoint-desktop)
-    +span(12 of 12 no-gutters)
-  &__horizontal-rule
-    @extend %footer__horizontal-rule
-  &__copyright
-    @extend %footer__copyright
-  &__social-buttons
-    @extend %footer__social-buttons
-  &__social-buttons-icon
-    @extend %footer__social-buttons-icon
-    img
-      //TODO: fix for BEM
-      width: auto
-      height: 100%
-      border: 0
-      outline: 0
+  +clearfix
+  padding: 0 20px
+  background-color: $black-500
+  &__contact
+    +span(8 of 12)
+    @media (min-width: 550px)
+      +span(4 of 12)
+    @media (min-width: $breakpoint-tablet)
+      +span (3 of 12)
+      display: inline
+    &-title
+      @extend %footer-title
+    &-address
+      @extend %footer-body
+      a
+        @extend %footer-body
+        display: block
+        margin-top: 0
+        text-decoration: underline
+        &:hover
+          color: white
+    &-copyright
+      margin: 20px 0
+      color: $black-400
+      font-size: 10px
+      letter-spacing: 1.29px
+      line-height: 14px
+      text-transform: uppercase
+
+  &__sub
+    display: none
+    @media (min-width: 550px)
+      +span (4 of 12)
+      display: inline
+    @media (min-width: $breakpoint-tablet)
+      +span (3 of 12)
+      display: inline
+
+    &-title
+      @extend %footer-title
+    &-list
+      @extend %footer-body
+      list-style: none
+      padding: 0
+    &-link
+      @extend %footer-body
+      margin-top: 0
+      &:hover
+        text-decoration: underline
+        color: white
+        cursor: pointer
+
+  &__social
+    display: none
+    @media (min-width: $breakpoint-tablet)
+      +span (3 of 12)
+      display: inline
+    &-title
+      @extend %footer-title
+    &-list
+      @extend %footer-body
+      list-style: none
+      padding: 0
+    &-link
+      &--github
+        &:before
+          +materialicon($github)
+          padding-right: 10px
+      &--dribbble
+        &:before
+          +materialicon($dribbble)
+          padding-right: 10px
+      &--linkedin
+        &:before
+          +materialicon($linkedin)
+          padding-right: 10px
+      &--codepen
+        &:before
+          +materialicon($codepen)
+          padding-right: 10px
+
+  &__top-link
+    +span(4 of 12 no-gutter)
+    @extend %footer-title
+    text-align: right
+    color: white
+    cursor: pointer
+    &:after
+      +materialicon($long-arrow-up)
+      padding-left: 5px
+    @media (min-width: $breakpoint-tablet)
+      +span (3 of 12 no-gutter)
+      display: inline

@@ -1,6 +1,6 @@
 //@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,300,600)
 @import url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css)
-
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,700,700italic)
 @mixin fontFace($fontSrc, $fontName)
   font-family: '#{$fontName}'
   src: font-url("#{$fontSrc}.eot" + "?#iefix") format('embedded-opentype'), font-url("#{$fontSrc}.woff") format('woff'), font-url("#{$fontSrc}.ttf") format('truetype'), font-url("#{$fontSrc}.svg" + "##{$fontName}") format('svg')
@@ -22,20 +22,14 @@
 @font-face
   +fontFace("decimamono-light-webfont","decima_monolight")
 
-
-
-
-body
-  font-family: 'decima_monoregular'
-
 $susy: ( columns: 12, gutters: 10, column-width: 70px, gutter-position: inside )
 
 $breakpoint-desktop: 1024px
 $breakpoint-tablet: 768px
 $breakpoint-mobile: 480px
 
-$font-primary: 'Open Sans', 'sans-serif'
-
+$font-primary: 'decima_monoregular', 'sans-serif'
+$font-body: 'Roboto Mono'
 // Grid settings
 $main-sm-columns: 12
 $sidebar-sm-columns: 4
@@ -64,9 +58,6 @@ $codepen: ""
 $dribbble: ""
 $github: ""
 $linkedin: ""
-
-//Font Awesome
-
 
 // Breakpoints
 $breakpoint-mobile: 320px

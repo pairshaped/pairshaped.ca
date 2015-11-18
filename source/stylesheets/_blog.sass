@@ -1,0 +1,153 @@
+// - - - - Blog Styling - - - -//
+
+.blog
+  &-related
+    padding: 40px 0 0 0
+  &-header
+    border-bottom: 1px solid $black-200
+    text-transform: uppercase
+  &-content
+    padding: 0 20px
+
+  &__header
+    margin-top: 40px
+    margin-bottom: 20px
+    padding: 0 20px
+    box-sizing: outline-box
+
+  &__header-title
+    float: left
+    font-family: decima_monobold
+    font-size: 12px
+    letter-spacing: 1.29px
+    line-height: 14px
+    text-transform: uppercase
+  &__header-text-button
+    float: right
+    font-family: decima_monobold
+    font-size: 12px
+    color: $brand-primary-500
+    letter-spacing: 1.29px
+    line-height: 14px
+    text-decoration: none
+    text-transform: uppercase
+    cursor: pointer
+    transition: padding-left 2s ease
+    a
+      text-decoration: none
+      color: $brand-primary-500
+    &:after
+      +materialicon($long-arrow-right)
+      padding-left: 5px
+    &:hover
+      text-decoration: underline
+  &__date
+    clear: both
+    margin-bottom: 10px
+    @media (min-width: $breakpoint-tablet)
+      +span (3 of 12)
+      padding: 0 20px 0 0
+    @media (min-width: $breakpoint-desktop)
+      +span (2 of 12)
+  &__title
+    margin-bottom: 10px
+    color: $brand-primary-500
+    font-size: 16px
+    line-height: 22px
+    cursor: pointer
+    text-decoration: none
+    transition: color 0.2s ease
+    @media (min-width: $breakpoint-tablet)
+      +span (9 of 12 no-gutter)
+    @media (min-width: $breakpoint-desktop)
+      +span (7 of 12)
+      margin-bottom: 0
+    &:hover
+      color: shade($brand-primary-500, 30)
+    @media (min-width: $breakpoint-desktop)
+      font-size: 18px
+      line-height: 24px
+
+  &__author
+    +clearfix
+    @media (min-width: $breakpoint-tablet)
+      +span (9 of 12 no-gutter)
+      +push (3 of 12)
+    @media (min-width: $breakpoint-desktop)
+      +span (3 of 12 no-gutter)
+      +push (0 of 12)
+  &__author-image
+    float: left
+    width: 30px
+    height: 30px
+    border-radius: 50px
+    @media (min-width: $breakpoint-desktop)
+      float: right
+
+  &__author-name
+    float: left
+    margin-left: 10px
+    margin-top: 7px
+    font-family: decima_monoitalic
+    font-size: 12px
+    color: $black-400
+    line-height: 14px
+    &:before
+      content: "by"
+      padding-right: 6px
+    @media (min-width: $breakpoint-desktop)
+      float: right
+      margin-right: 10px
+  &__break-line
+    background-color: $black-200
+.blog-list-item
+  +clearfix
+  margin-bottom: 20px
+  padding: 20px
+  border-bottom: 1px solid $black-200
+
+
+// Blog Index
+.blog-index
+  &__teaser
+    font-family: $font-body
+    font-size: 13px
+    color: $black-400
+    line-height: 22px
+    margin-top: 10px
+    @media (min-width: $breakpoint-tablet)
+      +span (9 of 12 no-gutter)
+      +push(3 of 12)
+    @media (min-width: $breakpoint-desktop)
+      +span (7 of 12)
+      +push(2 of 12)
+  &__read-more
+    display: block
+    margin-top: 20px
+    %text-button
+      font-family: decima_monobold
+      font-size: 12px
+      color: $brand-primary-500
+      letter-spacing: 1.29px
+      line-height: 14px
+      text-decoration: none
+      text-transform: uppercase
+      cursor: pointer
+      transition: padding-left 2s ease
+      a
+        text-decoration: none
+        color: $brand-primary-500
+      &:after
+        +materialicon($long-arrow-right)
+        padding-left: 5px
+      &:hover
+        text-decoration: underline
+
+    @media (min-width: $breakpoint-tablet)
+      +span (9 of 12 no-gutter)
+      +push(3 of 12)
+    @media (min-width: $breakpoint-desktop)
+      +span (7 of 12)
+      +push(2 of 12)
+
+
