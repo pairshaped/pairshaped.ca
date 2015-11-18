@@ -45,10 +45,10 @@
     clear: both
     margin-bottom: 10px
     @media (min-width: $breakpoint-tablet)
-      +span (3 of 12)
+      +span (3 of 12 no-gutters)
       padding: 0 20px 0 0
     @media (min-width: $breakpoint-desktop)
-      +span (2 of 12)
+      +span (2 of 12 no-gutters)
   &__title
     margin-bottom: 10px
     color: $brand-primary-500
@@ -58,9 +58,9 @@
     text-decoration: none
     transition: color 0.2s ease
     @media (min-width: $breakpoint-tablet)
-      +span (9 of 12 no-gutter)
+      +span (9 of 12 no-gutters)
     @media (min-width: $breakpoint-desktop)
-      +span (7 of 12)
+      +span (7 of 12 no-gutters)
       margin-bottom: 0
     &:hover
       color: shade($brand-primary-500, 30)
@@ -71,11 +71,11 @@
   &__author
     +clearfix
     @media (min-width: $breakpoint-tablet)
-      +span (9 of 12 no-gutter)
+      +span (9 of 12 no-gutters)
       +push (3 of 12)
     @media (min-width: $breakpoint-desktop)
-      +span (3 of 12 no-gutter)
-      +push (0 of 12)
+      +span (3 of 12 no-gutters)
+      margin-left: 0
   &__author-image
     float: left
     width: 30px
