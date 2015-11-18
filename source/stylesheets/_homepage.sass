@@ -66,9 +66,34 @@
 
 .intro
   clear: both
+  &__title
+    margin-bottom: 20px
+    font-size: 22px
+    letter-spacing: 0.1px
+    line-height: 21px
+    @media (min-width: $breakpoint-desktop)
+      font-size: 28px
+      line-height: 28px
 
   &__text-button
     margin-top: 20px
+    color: $brand-primary-500
+    font-family: decima_monobold
+    font-size: 12px
+    letter-spacing: 1.29px
+    line-height: 14px
+    text-decoration: none
+    text-transform: uppercase
+    cursor: pointer
+    transition: padding-left 2s ease
+    a
+      text-decoration: none
+      color: $brand-primary-500
+    &:after
+      +materialicon($long-arrow-right)
+      padding-left: 5px
+    &:hover
+      text-decoration: underline
 
 .projects
   &__header
@@ -124,6 +149,7 @@
     font-size: 12px
     line-height: 14px
     text-transform: uppercase
-.projects-list
-  padding: 20px 20px 0 20px
+  &-list
+    +clearfix
+    padding: 20px 20px 0 20px
 
