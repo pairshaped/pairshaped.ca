@@ -1,0 +1,226 @@
+main.about.container
+  .about__first-column
+    .about__scroll
+      a.about__scroll-item--active href="#" Intro
+      a.about__scroll-item href="#" Philosophy
+      a.about__scroll-item href="#" Process
+      a.about__scroll-item href="#" Our Team
+      a.about__scroll-item href="#" Our Stack
+
+  .about__second-column
+
+    .about__intro
+      h1 FUSCE VEHICULA DOLOR ARCU, SIT AMET BLANDIT DOLOR MOLLIS NEC. DO
+      p Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet ris.
+
+    .break-line
+
+    .about__philosophy
+      h2 Philosophy
+      p Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at. Vestibulum nec erat ut mi sollicitudin porttitor id sit amet ris.
+      ol
+        li This is an list item. It has a fixed size, and a fixed line height. Nullam gravida rutrum lectus, nec sollicitudin
+        li This is an list item. It has a fixed size, and a fixed line height. Nullam gravida rutrum lectus, nec sollicitudin
+        li This is an list item. It has a fixed size, and a fixed line height. Nullam gravida rutrum lectus, nec sollicitudin
+
+
+    .break-line
+
+    .about__process
+      h2 Process
+      p Nam dapibus nisl vitae elit fringilla rutrum. Aenean sollicitudin, erat a elementum rutrum, neque sem pretium metus, quis mollis nisl nunc et massa. Vestibulum sed metus in lorem tristique ullamcorper id vitae erat. Nulla mollis sapien sollicitudin lacinia lacinia. Vivamus facilisis dolor et massa placerat, at vestibulum nisl egestas. Nullam rhoncus lacus non odio luctus, eu condimentum mauris ultrices.
+
+      .about-grid
+
+        .about-grid__item
+          .about-grid__image
+            = image_tag("icon-application-trello.svg", class: 'about-grid__img')
+
+          .about-grid__text
+            .about-grid__text-header Trello
+
+        .about-grid__item
+          .about-grid__image
+            = image_tag("icon-application-hipchat.svg", class: "about-grid__img")
+
+          .about-grid__text
+            .about-grid__text-header HipChat
+
+    .break-line
+
+    .about__team
+      h2 Our Team
+      p Curabitur lobortis id lorem id bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.
+
+      .about-grid
+
+        .about-grid__item
+          =image_tag('bio-dave.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Dave Rapin
+            .about-grid__text-sub-header CTO & Co-Founder
+
+        .about-grid__item
+          =image_tag('bio-dayton.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Dayton Pereira
+            .about-grid__text-sub-header CEO & Co-Founder
+
+        .about-grid__item
+          =image_tag('bio-beard.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Alex Barry
+            .about-grid__text-sub-header Developer
+
+        .about-grid__item
+          =image_tag('bio-noble.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Andrew Noble
+            .about-grid__text-sub-header Developer
+
+        .about-grid__item
+          =image_tag('bio-brian.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Brian Hogg
+            .about-grid__text-sub-header Developer
+
+        .about-grid__item
+          =image_tag('bio-cam.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Cam Strobel
+            .about-grid__text-sub-header Ux Designer
+
+        .about-grid__item
+          =image_tag('bio-forrest.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Forrest Phillips
+            .about-grid__text-sub-header Ux Designer
+
+        .about-grid__item
+          =image_tag('bio-josh.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Josh Teeter
+            .about-grid__text-sub-header Developer
+
+        .about-grid__item
+          =image_tag('bio-justin.jpg', class: 'about-grid__team-headshot')
+          .about-grid__text
+            .about-grid__text-header Justin Fortier
+            .about-grid__text-sub-header Developer
+
+    .break-line
+
+    .about__stack
+      .about__title Our Stack
+      ul.about__filters
+        li.about__filters-item--active
+          a href="#" All
+        li.about__filters-item
+          a href="#" Development
+        li.about__filters-item
+          a href="#" Design
+
+      .about__stack-grid
+        .about-grid
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-sass.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Sass
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-react.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header React
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-rails.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Rails
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-node.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Node
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-coffee-script.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Coffee Script
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-webpack.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Webpack
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-meteor.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Meteor
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-github.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header GitHub
+
+
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-invisionapp.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Invision App
+
+          .about-grid__item
+            .about-grid__image
+              =image_tag('icon-application-balsamiq.svg', class: 'about-grid__img')
+
+            .about-grid__text
+              .about-grid__text-header Balsamiq
+
+
+      .about__stack-blog
+        .blog
+          .blog__header
+            .blog__header-title More About Our Stack
+            a.blog__header-text-button href="/blog Visit Blog"
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+// - - - - About Us Page Styling - - - - //
+
+.about
+  // Column Layouts
+  &__first-column
+    padding-right: 20px
+  &__second-column
+    @media (min-width: $breakpoint-tablet)
+      border: 1px solid $black-200
+
+  // Side Scroll
+  &__scroll
+    &-item
+      text-align: right
+      transition: color .3s ease
+      &:hover
+        color: $brand-primary-500
+      &--active
+        @extend .about__scroll-item
+        color: $brand-primary-500
+        &:after
+          color: $brand-primary-500
+
+  // Sections
+  &__intro, &__philosophy, &__process, &__team
+    padding: 0 20px
+  &__stack
+    padding: 0
+
+  // Stack Section Specific Styling
+  &__title
+    padding-left: 20px
+  &__filters
+    padding: 0 0 20px 0
+    list-style: none
+    @media (min-width: $breakpoint-tablet)
+      padding-right: 20px
+    &-item
+      color: $brand-primary-500
+      font-size: 12px
+      text-transform: uppercase
+      &:hover
+        text-decoration: underline
+      &--active
+        color: $black-300
+  &__stack-grid
+    padding: 0 20px
+
+// Image Grid
+.about-grid
+  &__image
+    background-color: $black-100
+  &__text
+    &-header
+      font-size: 12px
+      text-transform: uppercase
+    &-sub-header
+      font-size: 12px
+      font-style: italic
+      color: $black-400
+// - - - - About Us Layout - - - - //
+
+.about
+  // Column Layouts
+  &__first-column
+    display: none
+    @media (min-width: $breakpoint-tablet)
+      +span(2 of 12 no-gutter)
+      display: block
+  &__second-column
+    @media (min-width: $breakpoint-tablet)
+      +span(10 of 12 no-gutter)
+
+  // Side Scroll
+  &__scroll
+    &-item
+      position: relative
+      margin-bottom: 10px
+      &:first-child
+        margin-top: 40px
+      &--active
+        &:after
+          position: absolute
+          right: -24px
+          content: "—"
+          z-index: 5000
+
+  // Sections
+  &__intro, &__philosophy, &__process, &__team
+    margin: 40px 0
+  &__stack
+    margin: 40px 0 0 0
+
+  // Filters in Stack
+  &__title
+    display: inline-block
+  &__filters
+    +clearfix
+    display: block
+    @media (min-width: $breakpoint-tablet)
+      display: inline-block
+      float: right
+      margin: 0 0 20px 0
+      text-align: top
+    &-item
+      display: inline-block
+      margin-right: 10px
+      @media (min-width: $breakpoint-tablet)
+        margin: 0 0 0 10px
+
+// Image Grid
+.about-grid
+  display: -webkit-flex
+  display: flex
+  clear: both
+  width: 100%
+  flex-wrap: wrap
+  &__item
+    display: inline-block
+    width: calc(50% - 10px)
+    margin: 0 10px 20px 0
+    justify-content: flex-start
+    text-align: center
+    @media (min-width: 560px)
+      width: calc(33% - 10px)
+    @media (min-width: $breakpoint-tablet)
+      width: calc(25% - 10px)
+  &__image
+    height: 80px
+  &__img
+    margin-top: 20px
+    width: 100px
+    height: 40px
+  &__team-headshot
+    width: 100%
+    height: auto
+    max-width: 100%
+  &__text
+    margin-top: 5px
+
+
+
