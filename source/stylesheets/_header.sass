@@ -11,7 +11,45 @@
     cursor: pointer
 
   &__mobile-menu
+    position: absolute
+    top: 10px
+    right: 10px
     cursor: pointer
+    &-icon
+      position: relative
+      width: 40px
+      height: 40px
+      border-radius: 2px
+      transition: all 0.2s ease-out
+
+      &:hover
+        background-color: #222
+        border-radius: 80px
+        &:before
+          width: 18px
+          right: 11px
+        &:after
+          width: 18px
+          right: 11px
+
+      &:before
+        position: absolute
+        top: 16px
+        right: 0
+        width: 24px
+        height: 2px
+        background-color: white
+        content: ""
+        transition: all 0.2s ease-out
+      &:after
+        position: absolute
+        top: 22px
+        right: 0
+        width: 12px
+        height: 2px
+        background-color: white
+        content: ""
+        transition: all 0.2s ease-out
   &__nav-item
     text-align: center
     color: $black-200
@@ -66,11 +104,7 @@
   left: 0
   right: 0
   height: 60px
-  &__mobile-menu
-    float: right
-    margin-top: 2px
-    @media (min-width: $breakpoint-tablet)
-      display: none
+
   &__tablet-menu
     display: none
     @media (min-width: $breakpoint-tablet)
