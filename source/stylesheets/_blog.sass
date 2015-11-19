@@ -15,13 +15,6 @@
     padding: 0 20px
     box-sizing: outline-box
 
-  &__header-title
-    float: left
-    font-family: decima_monobold
-    font-size: 12px
-    letter-spacing: 1.29px
-    line-height: 14px
-    text-transform: uppercase
   &__header-text-button
     float: right
     font-family: decima_monobold
@@ -42,8 +35,7 @@
     &:hover
       text-decoration: underline
   &__date
-    clear: both
-    margin-bottom: 10px
+    @extend .date
     @media (min-width: $breakpoint-tablet)
       +span (3 of 12 no-gutters)
       padding: 0 20px 0 0
@@ -58,26 +50,26 @@
       +span (7 of 12 no-gutters)
 
   &__title
-    display: block
+    display: inline-block
     margin-bottom: 5px
-    color: $brand-primary-500
+    color: $black-500
     font-size: 16px
     line-height: 22px
     cursor: pointer
     text-decoration: none
     transition: color 0.2s ease
     &:hover
-      color: shade($brand-primary-500, 30)
+      color: $brand-primary-500
     @media (min-width: $breakpoint-desktop)
       font-size: 18px
       line-height: 24px
   &__tag-link
     display: inline-block
-    margin-right: 5px
+    margin-right: 8px
     margin-bottom: 5px
-    margin-left: -8px
     padding: 3px 8px
-    color: $brand-primary-500
+    background-color: $black-100
+    color: $black-400
     font-size: 12px
     font-weight: 700
     text-transform: uppercase
@@ -86,6 +78,8 @@
     &:hover
       background-color: $brand-primary-500
       color: white
+    &:first-child
+      margin-left: -8px
 
   &__author
     +clearfix

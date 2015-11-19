@@ -10,15 +10,14 @@ title: Pair Shaped
       .hero__scroll-diamond
 
 .intro
-  .intro__title WE ARE A UX DESIGN &#38; SOFTWARE DEVELOPMENT CONSULTANCY.
+  h2.subheader We are a UX Design &#38; Software Development Consultancy.
   a.intro__text-button href="/about" MORE ABOUT US
 
 .break-line
 
 .projects
   .projects__header
-    .projects__header-title PROJECTS
-    .projects__header-text-button ALL PROJECTS
+    h3.sectionheader Projects
 
 
   .projects-list
@@ -50,17 +49,10 @@ title: Pair Shaped
 
 .blog
   .blog__header
-    .blog__header-title Latest Posts
+    h3.sectionheader Latest Posts
     .blog__header-text-button
       a href="/blog" Visit Blog
 
 
   - blog.articles[0...3].each do |article|
-    .blog-list
-      .blog-list-item
-        .blog__date= article.date.strftime("%b %d, %Y")
-        a.blog__title( href=article.url )= article.title
-        - if article.data.author
-          .blog__author
-            div( class="blog__author-image--#{article.data.author.parameterize}")
-              .blog__author-name= article.data.author
+    = partial 'components/blog_item', locals: { article: article }

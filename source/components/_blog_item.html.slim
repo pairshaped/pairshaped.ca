@@ -3,8 +3,9 @@
     .blog__date= article.date.strftime("%b %d, %Y")
     .blog-description
       a.blog__title( href=article.url )= article.title
-      - article.data.tags.each do |tag, article|
-        = link_to tag, tag_path(tag), class: 'blog__tag-link'
+      .blog-tags
+        - article.data.tags.each do |tag, article|
+          = link_to tag, tag_path(tag), class: 'blog__tag-link'
     - if article.data.author
       .blog__author
         div( class="blog__author-image blog__author-image--#{article.data.author.parameterize}")
