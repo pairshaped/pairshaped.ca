@@ -1,28 +1,29 @@
 // - - - - Blog Styling - - - -//
 @keyframes animTagsLoad
   0%
-    visibility: hidden
+    opacity: 0
+    transform: scaleX(0.8)
   100%
-    visibility: visible
+    opacity: 1
+    transform: scaleX(1)
 
 @keyframes animTagsReverse
   0%
-    transform: scale(1,1)
-  30%
-    transform: scale(1,0.2)
+    transform: scale(0.5,0.8)
+    border-bottom-left-radius: 0
   100%
     transform: scale(0,0)
+    border-bottom-left-radius: 50px
 
 @keyframes animTagsForward
   0%
     transform: scale(0.5,0)
-    border-radius: 50px
-
+    border-top-right-radius: 50px
   90%
-    transform: scale(1.1,1.05)
+    transform: scale(1,1.05)
   100%
     transform: scale(1,1)
-    border-radius: 0
+    border-top-right-radius: 0
 
 .blog
   &-related
@@ -100,11 +101,13 @@
     text-transform: uppercase
     text-decoration: none
     transition: color 0.05s
-    transition-delay: 0.15s
-    visibility: hidden
-    animation: animTagsLoad 0.1s ease
+    transition-delay: 0.1s
+    transform-origin: 0% 50%
+    opacity: 0
+    animation: animTagsLoad 0.3s ease-out
     animation-fill-mode: forwards
-    animation-delay: 0.2s
+    +animSequenceDelay(4,0.4)
+
     &:before
       position: absolute
       z-index: -2
@@ -123,9 +126,9 @@
       width: 100%
       background-color: $brand-primary-500
       content: ""
-      animation: animTagsReverse ease-out 0.15s
+      animation: animTagsReverse ease-out 0.2s
       animation-fill-mode: forwards
-      transform-origin: 50% 100%
+      transform-origin: 100% 0%
 
     &:hover
       color: white
@@ -134,6 +137,7 @@
         animation: animTagsForward ease-out 0.25s
         animation-fill-mode: forwards
         animation-delay: 0
+        transform-origin: 0% 100%
 
   &__author
     +clearfix

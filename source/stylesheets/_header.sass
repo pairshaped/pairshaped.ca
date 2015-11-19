@@ -22,16 +22,19 @@
       height: 40px
       border-radius: 2px
       transition: all 0.2s ease-out
+      transition-delay: 0.5s
       &:hover
         background-color: $black-700
         border-radius: 80px
+        transition-delay: 0s
         &:before
-          width: 18px
           right: 11px
-          transition-delay: 0.05s
+          width: 18px
         &:after
-          width: 18px
-          right: 11px
+          right: 12px
+          width: 16px
+          transition-delay: 0.05s
+
 
       &:before
         position: absolute
@@ -41,7 +44,8 @@
         height: 2px
         background-color: white
         content: ""
-        transition: all 0.2s ease-out
+        transition: inherit
+        transition-delay: inherit
       &:after
         position: absolute
         top: 22px
@@ -50,7 +54,8 @@
         height: 2px
         background-color: white
         content: ""
-        transition: all 0.2s ease-out
+        transition: inherit
+        transition-delay: inherit
   &__nav-item
     text-align: center
     color: $black-200
