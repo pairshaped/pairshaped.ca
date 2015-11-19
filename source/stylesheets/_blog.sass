@@ -1,4 +1,28 @@
 // - - - - Blog Styling - - - -//
+@keyframes animTagsLoad
+  0%
+    visibility: hidden
+  100%
+    visibility: visible
+
+@keyframes animTagsReverse
+  0%
+    transform: scale(1,1)
+  30%
+    transform: scale(1,0.2)
+  100%
+    transform: scale(0,0)
+
+@keyframes animTagsForward
+  0%
+    transform: scale(0.5,0)
+    border-radius: 50px
+
+  90%
+    transform: scale(1.1,1.05)
+  100%
+    transform: scale(1,1)
+    border-radius: 0
 
 .blog
   &-related
@@ -25,7 +49,6 @@
     text-decoration: none
     text-transform: uppercase
     cursor: pointer
-    transition: padding-left 2s ease
     a
       text-decoration: none
       color: $brand-primary-500
@@ -64,22 +87,53 @@
       font-size: 18px
       line-height: 24px
   &__tag-link
+    position: relative
+    z-index: 2
     display: inline-block
-    margin-right: 8px
+    margin-right: 16px
     margin-bottom: 5px
+    margin-left: -8px
     padding: 3px 8px
-    background-color: $black-100
     color: $black-400
     font-size: 12px
     font-weight: 700
     text-transform: uppercase
     text-decoration: none
-    transition: all 0.2s ease
-    &:hover
+    transition: color 0.05s
+    transition-delay: 0.15s
+    visibility: hidden
+    animation: animTagsLoad 0.1s ease
+    animation-fill-mode: forwards
+    animation-delay: 0.2s
+    &:before
+      position: absolute
+      z-index: -2
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
+      background-color: $black-100
+      content: ""
+    &:after
+      position: absolute
+      z-index: -1
+      top: 0
+      left: 0
+      height: 100%
+      width: 100%
       background-color: $brand-primary-500
+      content: ""
+      animation: animTagsReverse ease-out 0.15s
+      animation-fill-mode: forwards
+      transform-origin: 50% 100%
+
+    &:hover
       color: white
-    &:first-child
-      margin-left: -8px
+      transition-delay: 0s
+      &:after
+        animation: animTagsForward ease-out 0.25s
+        animation-fill-mode: forwards
+        animation-delay: 0
 
   &__author
     +clearfix

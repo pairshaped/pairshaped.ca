@@ -1,5 +1,4 @@
 // - - - -  Header Styling - - - - //
-
 .header
   +clearfix
   padding: 20px 20px 0 20px
@@ -15,19 +14,21 @@
     top: 10px
     right: 10px
     cursor: pointer
+    @media (min-width: $breakpoint-tablet)
+      display: none
     &-icon
       position: relative
       width: 40px
       height: 40px
       border-radius: 2px
       transition: all 0.2s ease-out
-
       &:hover
-        background-color: #222
+        background-color: $black-700
         border-radius: 80px
         &:before
           width: 18px
           right: 11px
+          transition-delay: 0.05s
         &:after
           width: 18px
           right: 11px
