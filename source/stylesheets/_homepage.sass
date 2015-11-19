@@ -110,7 +110,7 @@
     &-text-button
       float: right
   &__image
-    overflow: hidden
+    //transform: rotateY(-50deg)
   &__img
     max-width: 100%
   &__type
@@ -121,6 +121,7 @@
     line-height: 14px
     text-transform: uppercase
   &-list
+    position: relative
     display: flex
     flex-wrap: wrap
     +clearfix
@@ -129,6 +130,7 @@
       margin-left: -20px
       margin-top: -20px
     &-item
+      //perspective: 1200px
       margin-bottom: 20px
       max-width: 100%
       &:last-child
@@ -139,8 +141,6 @@
         margin-left: 20px
       @media (min-width: $breakpoint-desktop)
         flex: 1 0 calc(25% - 20px)
-
-
 
 
 
