@@ -44,10 +44,9 @@ configure :development do
 end
 
 activate :blog do |blog|
-  #blog.prefix = "blog"
-  #blog.sources = "blog/{year}-{month}-{day}-{title}.html.md"
   blog.permalink = "blog/:title.html"
   blog.sources = "blog/:title.html"
+  blog.tag_template = "tag.html"
 end
 
 # Methods defined in the helpers block are available in templates

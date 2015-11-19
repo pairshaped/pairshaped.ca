@@ -1,0 +1,84 @@
+// - - - - Contact Styling - - - - //
+
+.contact
+  &__first-column
+    height: calc(100% - 220px)
+    @media (min-width: $breakpoint-tablet)
+      float: left
+      width: 50%
+      outline: 1px solid red
+  &__second-column
+    padding: 0
+    margin: 0
+    display: -webkit-box
+    display: -moz-box
+    display: -ms-flexbox
+    display: -webkit-flex
+    display: flex
+    align-items: center
+    justify-content: center
+    @media (min-width: $breakpoint-tablet)
+      float: right
+      width: 50%
+      height: 100%
+
+  &__logo
+    width: 80%
+    height: auto
+    margin-bottom: 20px
+    @media (min-width: $breakpoint-tablet)
+      margin-bottom: 40px
+
+  &__info
+    margin: 40px
+    color: $black-500
+    font-size: 20px
+    line-height: 30px
+    @media (min-width: $breakpoint-tablet)
+      color: $black-500
+      font-size: 30px
+      line-height: 35px
+    &-link
+      transition: color .3s ease
+      border-bottom: 2px solid $black-500
+      @media (min-width: $breakpoint-tablet)
+        border-bottom: none
+      &:hover
+        color: $brand-primary-500
+        border-bottom: 2px solid $brand-primary-500
+        @media (min-width: $breakpoint-tablet)
+          border-bottom: 3px solid $brand-primary-500
+
+  &__social
+    margin-top: 40px
+    &-icon
+      &--github
+        transition: color .3s ease
+        &:hover
+          color: $brand-primary-500
+        &:before
+          +materialicon($github)
+          padding-right: 10px
+      &--dribbble
+        transition: color .3s ease
+        &:hover
+          color: $brand-primary-500
+        &:before
+          +materialicon($dribbble)
+          padding-right: 10px
+      &--linkedin
+        transition: color .3s ease
+        &:hover
+          color: $brand-primary-500
+        &:before
+          +materialicon($linkedin)
+          padding-right: 10px
+      &--codepen
+        transition: color .3s ease
+        &:hover
+          color: $brand-primary-500
+        &:before
+          +materialicon($codepen)
+          padding-right: 10px
+
+

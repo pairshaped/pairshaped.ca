@@ -2,11 +2,6 @@
   .blog__header
     .blog__header-title Latest Posts
   - blog.articles.each do |article|
-    .blog-list
-      .blog-list-item
-        .blog__date= article.date.strftime("%b %d, %Y")
-        a.blog__title( href=article.url )= article.title
-        - if article.data.author
-          .blog__author
-            div( class="blog__author-image--#{article.data.author.parameterize}")
-              .blog__author-name= article.data.author
+    = partial 'components/blog_item', locals: { article: article }
+
+

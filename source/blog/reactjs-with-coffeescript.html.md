@@ -1,7 +1,8 @@
 ---
 title: "Using CoffeeScript with ReactJS"
 date: 2015-02-03 9:23
-categories: [programming, javascript, coffeescript, reactjs]
+tags: [programming, javascript, coffeescript, reactjs]
+author: "Dave Rapin"
 ---
 
 Lately I've been using ReactJS a lot to build rich user experiences on the web, and it's been absolutely great. A huge improvement over AngularJS in my humble opinion.</p>
@@ -33,7 +34,7 @@ var Jumbotron = React.createClass({
       React.createElement('div', {className: "jumbotron"},
         React.createElement('div', {className: "container"},
           React.createElement('h1', {},
-            React.createElement('p', {}, 
+            React.createElement('p', {},
               React.createElement('a', { className: "btn btn-primary btn-lg", href: "#", role: "button" }, "Learn more »")
             )
           )

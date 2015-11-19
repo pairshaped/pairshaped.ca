@@ -11,15 +11,11 @@
   // Side Scroll
   &__scroll
     &-item
+      color: $brand-primary-500
       text-align: right
       transition: color .3s ease
       &:hover
-        color: $brand-primary-500
-      &--active
-        @extend .about__scroll-item
-        color: $brand-primary-500
-        &:after
-          color: $brand-primary-500
+        color: shade($brand-primary-500, 30)
 
   // Sections
   &__intro, &__philosophy, &__process, &__team
@@ -73,17 +69,11 @@
 
   // Side Scroll
   &__scroll
+    padding-top: 40px
     &-item
       position: relative
+      display: block
       margin-bottom: 10px
-      &:first-child
-        margin-top: 40px
-      &--active
-        &:after
-          position: absolute
-          right: -24px
-          content: "—"
-          z-index: 5000
 
   // Sections
   &__intro, &__philosophy, &__process, &__team

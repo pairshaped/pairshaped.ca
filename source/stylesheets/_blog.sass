@@ -49,49 +49,88 @@
       padding: 0 20px 0 0
     @media (min-width: $breakpoint-desktop)
       +span (2 of 12 no-gutters)
-  &__title
+  &-description
     margin-bottom: 10px
+    @media (min-width: $breakpoint-tablet)
+      +span (9 of 12 no-gutters)
+      margin-bottom: 0
+    @media (min-width: $breakpoint-desktop)
+      +span (7 of 12 no-gutters)
+
+  &__title
+    display: block
+    margin-bottom: 5px
     color: $brand-primary-500
     font-size: 16px
     line-height: 22px
     cursor: pointer
     text-decoration: none
     transition: color 0.2s ease
-    @media (min-width: $breakpoint-tablet)
-      +span (9 of 12 no-gutters)
-    @media (min-width: $breakpoint-desktop)
-      +span (7 of 12 no-gutters)
-      margin-bottom: 0
     &:hover
       color: shade($brand-primary-500, 30)
     @media (min-width: $breakpoint-desktop)
       font-size: 18px
       line-height: 24px
+  &__tag-link
+    display: inline-block
+    margin-right: 5px
+    margin-bottom: 5px
+    margin-left: -8px
+    padding: 3px 8px
+    color: $brand-primary-500
+    font-size: 12px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+    transition: all 0.2s ease
+    &:hover
+      background-color: $brand-primary-500
+      color: white
 
   &__author
     +clearfix
     @media (min-width: $breakpoint-tablet)
-      +span (9 of 12 no-gutters)
-      +push (3 of 12)
-    @media (min-width: $breakpoint-desktop)
       +span (3 of 12 no-gutters)
-      margin-left: 0
   &__author-image
     float: left
-    width: 30px
-    height: 30px
+    width: 50px
+    height: 50px
     border-radius: 50px
+    background-size: cover
+    background-position: center center
     @media (min-width: $breakpoint-desktop)
       float: right
+    &--alex-barry
+      background-image: image-url('bio-beard.jpg')
+
+    &--andrew-noble
+      background-image: image-url('bio-noble.jpg')
+
+    &--brian-hogg
+      background-image: image-url('bio-brian.jpg')
+
+    &--dave-rapin
+      background-image: image-url('bio-dave.jpg')
+
+    &--dayton-pereira
+      background-image: image-url('bio-dayton.jpg')
+
+    &--forrest-phillips
+      background-image: image-url('bio-forrest.jpg')
+
+    &--josh-teeter
+      background-image: image-url('bio-josh.jpg')
+
+    &--justin-fortier
+      background-image: image-url('bio-justin.jpg')
 
   &__author-name
     float: left
     margin-left: 10px
-    margin-top: 7px
     font-family: decima_monoitalic
     font-size: 12px
     color: $black-400
-    line-height: 14px
+    line-height: 50px
     &:before
       content: "by"
       padding-right: 6px
