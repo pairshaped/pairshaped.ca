@@ -1,8 +1,9 @@
-.pageheader
-  h2.subheader Blog
-  h3.sectionheader
-    | Posts related to &quot;
-    = tagname
-    | &quot;
-- articles.each do |article|
-  = partial 'components/blog_item', locals: { article: article }
+.container
+  .pageheader
+    h2.subheader Blog
+    h3.sectionheader
+      | Posts related to &quot;
+      = tagname
+      | &quot;
+  - articles.each do |article|
+    = partial 'components/blog_item', locals: { article: article }

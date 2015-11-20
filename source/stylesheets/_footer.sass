@@ -26,12 +26,11 @@
   padding: 0 20px
   background-color: $black-500
   &__contact
-    +span(8 of 12)
+    +span(8 of 12 no-gutters)
     @media (min-width: 550px)
-      +span(4 of 12)
+      +span(4 of 12 no-gutters)
     @media (min-width: $breakpoint-tablet)
-      +span (3 of 12)
-      display: inline
+      +span (3 of 12 no-gutters)
     &-title
       @extend %footer-title
     &-address
@@ -77,7 +76,7 @@
   &__social
     display: none
     @media (min-width: $breakpoint-tablet)
-      +span (3 of 12)
+      +span (3 of 12 no-gutters)
       display: inline
     &-title
       @extend %footer-title
