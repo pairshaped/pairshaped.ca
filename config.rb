@@ -47,6 +47,7 @@ activate :blog do |blog|
   blog.permalink = "blog/:title.html"
   blog.sources = "blog/:title.html"
   blog.tag_template = "tag.html"
+  blog.layout = "layouts/blog"
 end
 
 # Methods defined in the helpers block are available in templates
