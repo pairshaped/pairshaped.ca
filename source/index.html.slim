@@ -12,15 +12,13 @@ title: Pair Shaped
 .container
   .intro
     h2.subheader We are a UX Design &#38; Software Development Consultancy.
-    a.intro__text-button href="/about" MORE ABOUT US
+    a.link-forwards href="/about" More About Us
 
 .break-line
 
-
 .projects.container
-  .projects__header
-    h3.sectionheader Projects
-
+  .section-header
+    h3.section-header__title Projects
 
   .projects-list
     .projects-list-item
@@ -50,11 +48,10 @@ title: Pair Shaped
 .break-line
 
 .blog.container
-  .blog__header
-    h3.sectionheader Latest Posts
-    .blog__header-text-button
-      a href="/blog" Visit Blog
-
+  .section-header
+    h3.section-header__title Latest Posts
+    .section-header__link
+      a.link-forwards href="/blog" Visit Blog
 
   - blog.articles[0...3].each do |article|
     = partial 'components/blog_item', locals: { article: article }

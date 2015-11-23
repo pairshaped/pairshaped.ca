@@ -1,6 +1,6 @@
-//@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,400,700,300,600)
-@import url(https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css)
-@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:400,400italic,700,700italic)
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,600italic,700,700italic,400italic)
+@import url(//cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.1.2/css/material-design-iconic-font.min.css)
+
 @mixin fontFace($fontSrc, $fontName)
   font-family: '#{$fontName}'
   src: font-url("#{$fontSrc}.eot" + "?#iefix") format('embedded-opentype'), font-url("#{$fontSrc}.woff") format('woff'), font-url("#{$fontSrc}.ttf") format('truetype'), font-url("#{$fontSrc}.svg" + "##{$fontName}") format('svg')
@@ -28,8 +28,9 @@ $breakpoint-desktop: 1024px
 $breakpoint-tablet: 768px
 $breakpoint-mobile: 480px
 
-$font-primary: 'decima_monoregular', 'sans-serif'
-$font-body: 'Roboto Mono'
+$font-primary: 'decima_monoregular', sans-serif
+$font-body: 'Open Sans', sans-serif
+
 // Grid settings
 $main-sm-columns: 12
 $sidebar-sm-columns: 4

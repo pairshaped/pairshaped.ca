@@ -1,5 +1,11 @@
 $susy: ( columns: 12, gutters: 10, column-width: 70px, gutter-position: inside )
 
+@keyframes animLinkUnderline
+  0%
+    width: 0%
+  100%
+    width: 100%
+
 img
   max-width: 100%
 
@@ -32,15 +38,6 @@ a
   font-weight: normal
   line-height: 1
 
-.sectionheader
-  margin: 0 0 10px 0
-  padding: 0
-  font-size: 14px
-  font-family: $font-primary
-  font-weight: bold
-  line-height: 1
-  text-transform: uppercase
-
 .date
   margin: 0 0 10px 0
   padding: 0
@@ -49,6 +46,62 @@ a
   font-family: $font-primary
   line-height: 1
 
+.section-header
+  position: relative
+  min-height: 40px
+  margin-top: 20px
+  &__link
+    @media (min-width: $breakpoint-tablet)
+      position: absolute
+      top: 0
+      right: 0
+      text-align: right
+
+  &__title
+    margin: 0 0 10px 0
+    padding: 0
+    font-size: 14px
+    font-family: $font-primary
+    font-weight: bold
+    line-height: 1
+    text-transform: uppercase
+
+.link-forwards
+  position: relative
+  z-index: 5
+  margin-top: 20px
+  margin-right: 40px
+  padding-right: 2px
+  color: $brand-primary-500
+  font-size: 14px
+  letter-spacing: 1.29px
+  line-height: 14px
+  text-decoration: none
+  text-shadow: 3px 0 0 white, -3px 0 0 white, 2px 0 0 white, -2px 0 0 white, 1px 0 0 white, -1px 0 0 white
+  a
+    text-decoration: none
+    color: $brand-primary-500
+  &:after
+    +materialicon($long-arrow-right)
+    position: absolute
+    top: 5px
+    right: -20px
+
+
+  &:before
+    position: absolute
+    z-index: -1
+    width: 0%
+    background-color: $brand-primary-500
+    height: 1px
+    animation: none
+  &:hover
+    &:before
+      bottom: 2px
+      left: -1px
+      content: ''
+      animation: animLinkUnderline cubic-bezier(.09,.54,.29,1.24) 0.5s
+      animation-fill-mode: forwards
 
 
 
