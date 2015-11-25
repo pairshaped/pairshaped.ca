@@ -7,8 +7,8 @@ a name="top"
       .header__mobile-menu-icon
     .header__tablet-menu
       .header__nav-list.header-hover
-        a.header__nav-item href="/" Home
-        a.header__nav-item href="/work" Work
-        a.header__nav-item href="/blog" Blog
-        a.header__nav-item href="/about" About
-        a.header__nav-item href="/contact" Contact
+        a.header__nav-item href="/" class=('active' if current_page.url == '/') Home
+        a.header__nav-item href="/work" class=('active' if current_page.url.start_with?('/work')) Work
+        a.header__nav-item href="/blog" class=('active' if current_page.url.start_with?('/blog')) Blog
+        a.header__nav-item href="/about" class=('active' if current_page.url.start_with?('/about')) About
+        a.header__nav-item href="/contact" class=('active' if current_page.url.start_with?('/contact')) Contact
