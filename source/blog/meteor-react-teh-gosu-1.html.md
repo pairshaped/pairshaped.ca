@@ -64,12 +64,16 @@ This list will update in real time as votes are added.
 
 Create our project:
 
-    meteor create tehgosu
+```bash
+meteor create tehgosu
+```
 
 This creates a basic Meteor application that we can run right away:
 
-    cd tehgosu
-    meteor
+```bash
+cd tehgosu
+meteor
+```
 
 Then visit [http://localhost:3000](http://localhost:3000)
 
@@ -79,26 +83,34 @@ Before we can start working on any views, we need to install React since that's 
 
 Adding libraries to Meteor is super simple:
 
-    meteor add react
+```bash
+meteor add react
+```
 
 We personally prefer CoffeeScript over JavaScript due to the readability of significant whitespace.
 There's a popular opinion at the moment that CoffeeScript is obsolete now that we have ES6 and Babel.
 I disagree because I think browsers will eventually support [WebAssembly](https://brendaneich.com/2015/06/from-asm-js-to-webassembly/).
 Once they do we'll see even more JavaScript alternatives.
 
-    meteor add coffeescript
+```bash
+meteor add coffeescript
+```
 
 Now we'll need to do some standard tweaks in order to have React and CoffeeScript play nice without excessive amounts of syntax.
 First we'll create a lib folder and add a component.coffee library to it.
 
-    mkdir lib
-    touch lib/component.coffee
+```bash
+mkdir lib
+touch lib/component.coffee
+```
 
 In component.coffee we're going to add a function that we'll be calling instead of React.createClass
 
-    @Component =
-      create: (spec) ->
-        React.createFactory React.createClass(spec)
+```coffeescript
+@Component =
+  create: (spec) ->
+    React.createFactory React.createClass(spec)
+```
 
 Notice the __@__ symbol used to declare our Component object?
 CoffeeScript places our code in a closure so as not to pollute the global namespace.
@@ -109,22 +121,26 @@ For now __@Component__ makes our object accessible throughout the application.
 
 Now we can create a React component in CoffeeScript like so:
 
-    TestComponent = Component.create
-      render: ->
-        div className: 'test-component',
-          'Test Component'
+```coffeescript
+TestComponent = Component.create
+  render: ->
+    div className: 'test-component',
+      'Test Component'
+```
 
 The equivalent in JSX without our library would look like this:
 
-    TestComponent = React.createClass({
-      render: function() {
-        return (
-          <div class="test-component">
-            Test Component
-          </div>
-        );
-      }
-    });
+```javascript
+TestComponent = React.createClass({
+  render: function() {
+    return (
+      <div class="test-component">
+        Test Component
+      </div>
+    );
+  }
+});
+```
 
 ### Project Structure
 
@@ -139,55 +155,71 @@ We want the following directories under the root of the project:
 * server: Code that should only be run on the server.
 * public: Only served to the public. We'll put our robots.txt and images in here.
 
-    mkdir lib client server public
+```bash
+mkdir lib client server public
+```
 
 Let's remove the initial files that meteor created. We don't need them.
 
-    rm tehgosu.*
+```bash
+rm tehgosu.*
+```
 
 ### Time to Write Some Code
 
 Create a new HTML file in the client directory.
 Since we're using React for our views, this will be the only HTML file we need.
 
-    vi client/index.html
+```bash
+vi client/index.html
+```
 
 In this HTML file we just need a div element which react will replace once it's loaded.
 
-    <head>
-      <title>Teh Gosu</title>
-    </head>
+```html
+<head>
+  <title>Teh Gosu</title>
+</head>
 
-    <body>
-      <div id="app">Loading...</div>
-    </body>
+<body>
+  <div id="app">Loading...</div>
+</body>
+```
 
 Now we need to attach our React views.
 Create a new CoffeeScript file in the client directory.
 
-    vi client/index.coffee
+```bash
+vi client/index.coffee
+```
 
 In this CoffeeScript file we load up our React views and attache them to the DOM.
 
-    Meteor.startup ->
-      React.render(
-        App({}),
-        document.getElementById 'app'
-      )
+```coffeescript
+Meteor.startup ->
+  React.render(
+    App({}),
+    document.getElementById 'app'
+  )
+```
 
 We're referencing an object called __App__ within the Render method, so we need to build that.
 Create a new CoffeeScript file in the client directory for it.
 
-    vi client/app.coffee
+```bash
+vi client/app.coffee
+```
 
 Our new app.coffee is going to hold our top level React component code.
 
-    { h1 } = React.DOM
+```coffeescript
+{ h1 } = React.DOM
 
-    @App = Component.create
-      render: ->
-        h1 {},
-          'Teh Gosu!'
+@App = Component.create
+  render: ->
+    h1 {},
+      'Teh Gosu!'
+```
 
 We're keeping it simple. All we're doing is rendering an h1 tag with the text __Teh Gosu!__.
 Notice the __@__ symbol prefix to the App declaration.
@@ -195,7 +227,9 @@ Again this is because of CoffeeScript's automatic closure and the fact that Mete
 
 At this point we should have a working React + Meteor application. Run the server with:
 
-    meteor
+```bash
+meteor
+```
 
 Then visit [http://localhost:3000](http://localhost:3000)
 
@@ -203,14 +237,16 @@ You should see __Teh Gosu!__.
 
 Your directory structure should be:
 
-    client
-      app.coffee
-      index.coffee
-      index.html
-    lib
-      component.coffee
-    server
-    public
+```
+client
+  app.coffee
+  index.coffee
+  index.html
+lib
+  component.coffee
+server
+public
+```
 
 This concludes part one of our Meteor + React series.
 In part two we'll add some data and the match view.
