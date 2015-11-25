@@ -1,8 +1,19 @@
 // - - - -  Header Styling - - - - //
+
+
 .header
   +clearfix
+  position: relative
+  z-index: 5000
+  top: 0
+  left: 0
+  right: 0
+  height: 60px
   padding: 10px 20px 0 20px
   background-color: $black-500
+  &-container
+    +clearfix
+    margin: 0 auto
   &__logo
     float: left
     display: block
@@ -12,15 +23,15 @@
     img
       line-height: 0
 
-  &__mobile-menu
+  &-menu
     position: absolute
     top: 10px
     right: 10px
     cursor: pointer
-    @media (min-width: $breakpoint-tablet)
-      display: none
-    &-icon
+
+    &__icon
       position: relative
+      display: block
       width: 40px
       height: 40px
       border-radius: 2px
@@ -37,7 +48,6 @@
           right: 12px
           width: 16px
           transition-delay: 0.05s
-
       &:before
         position: absolute
         top: 16px
@@ -48,7 +58,6 @@
         content: ""
         transition: inherit
         transition-delay: inherit
-
       &:after
         position: absolute
         top: 22px
@@ -59,10 +68,13 @@
         content: ""
         transition: inherit
         transition-delay: inherit
+      @media (min-width: $breakpoint-tablet)
+        display: none
 
   &__nav-item
     position: relative
-    display: inline-block
+    float: right
+    display: none
     height: 40px
     margin-right: 20px
     padding: 0 1px
@@ -98,27 +110,28 @@
         content: ''
         animation: animLinkUnderline cubic-bezier(.09,.54,.29,1.24) 0.5s
         animation-fill-mode: forwards
-
-
-
-// - - - - Header Layout - - - - //
-.header-container
-  +clearfix
-  margin: 0 auto
-.header
-  +clearfix
-  position: relative
-  z-index: 5000
-  top: 0
-  left: 0
-  right: 0
-  height: 60px
-
-  &__tablet-menu
-    display: none
     @media (min-width: $breakpoint-tablet)
-      display: inline
-  &__nav-list
-    float: right
+      display: inline-block
+
+
+// Open State
+.header-menu--open
+  .header-menu__icon
+    //outline: 1px solid red
+    &:after
+      top: 19px
+      right: 8px
+      width: 24px
+      transform: rotateZ(45deg)
+      transform-origin: 50% 50%
+      //transition-delay: 0s
+    &:before
+      top: 19px
+      right: 8px
+      width: 24px
+      transform: rotateZ(-45deg)
+      transform-origin: 50% 50%
+      //transition-delay: 0s
+
 
 
