@@ -18,10 +18,8 @@
         color: shade($brand-primary-500, 30)
 
   // Sections
-  &__intro, &__philosophy, &__process, &__team
+  &__intro, &__philosophy, &__process-culture, &__team, &__stack,  &__contact
     padding: 0 20px
-  &__stack
-    padding: 0
 
   // Stack Section Specific Styling
   &__title
@@ -48,12 +46,14 @@
     background-color: $black-100
   &__text
     &-header
+      font-family: $font-primary
       font-size: 12px
       text-transform: uppercase
     &-sub-header
+      color: $black-400
+      font-family: $font-primary
       font-size: 12px
       font-style: italic
-      color: $black-400
 // - - - - About Us Layout - - - - //
 
 .about
@@ -74,12 +74,23 @@
       position: relative
       display: block
       margin-bottom: 10px
+      font-family: $font-primary
+
+  //Contact
+  &__contact
+    &-link
+      color: $brand-primary-500
+      display: block
+      &:hover
+        text-decoration: underline
 
   // Sections
-  &__intro, &__philosophy, &__process, &__team
+  &__intro, &__philosophy, &__process-culture, &__team, &__contact
     margin: 40px 0
   &__stack
     margin: 40px 0 0 0
+    &-grid
+      padding: 0
 
   // Filters in Stack
   &__title
@@ -97,6 +108,10 @@
       margin-right: 10px
       @media (min-width: $breakpoint-tablet)
         margin: 0 0 0 10px
+
+.sectionheader
+  font-family: $font-primary
+  text-transform: uppercase
 
 // Image Grid
 .about-grid
@@ -127,6 +142,7 @@
     max-width: 100%
   &__text
     margin-top: 5px
+
 
 
 

@@ -29,14 +29,23 @@ body
 a
   text-decoration: none
 
+p
+  margin-bottom: 20px
+  font-size: 12px
+  @media (min-width: $breakpoint-tablet)
+    font-size: 14px
+    line-height: 20px
+
 .subheader
   margin: 0 0 20px 0
   padding: 0
   color: $black-500
-  font-size: 30px
+  font-size: 18px
   font-family: $font-primary
   font-weight: normal
   line-height: 1
+  @media (min-width: $breakpoint-tablet)
+    font-size: 28px
 
 .date
   margin: 0 0 10px 0
@@ -51,6 +60,7 @@ a
   min-height: 40px
   margin-top: 20px
   padding: 0 20px
+  font-family: $font-primary
   &__link
     @media (min-width: $breakpoint-tablet)
       position: absolute
