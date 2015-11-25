@@ -24,13 +24,14 @@ body
   min-height: inherit
   margin: 0
   padding: 0 0 190px 0
-  font-family: $font-body
+  font-family: $font-primary
 
 a
   text-decoration: none
 
 p
   margin-bottom: 20px
+  font-family: $font-body
   font-size: 12px
   @media (min-width: $breakpoint-tablet)
     font-size: 14px
@@ -89,6 +90,7 @@ p
   letter-spacing: 1.29px
   line-height: 14px
   text-decoration: none
+  text-transform: uppercase
   text-shadow: 3px 0 0 white, -3px 0 0 white, 2px 0 0 white, -2px 0 0 white, 1px 0 0 white, -1px 0 0 white
   a
     text-decoration: none
@@ -96,7 +98,7 @@ p
   &:after
     +materialicon($long-arrow-right)
     position: absolute
-    top: 3px
+    top: 0px
     right: -15px
 
   &:before
@@ -108,7 +110,7 @@ p
     animation: none
   &:hover
     &:before
-      bottom: 2px
+      bottom: -3px
       left: -1px
       content: ''
       animation: animLinkUnderline cubic-bezier(.09,.54,.29,1.24) 0.5s

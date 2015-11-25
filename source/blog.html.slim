@@ -1,7 +1,8 @@
 .blog.container
   .pageheader
     h2.subheader Blog
-    h3.sectionheader Latest Posts
+    .section-header
+      h3.section-header__title Latest Posts
   - blog.articles.each do |article|
     = partial 'components/blog_item', locals: { article: article }
 

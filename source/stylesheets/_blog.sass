@@ -34,6 +34,9 @@
   &-content
     padding: 0 20px
 
+  &-tags
+    padding-left: 8px
+
   &__header
     margin-top: 40px
     margin-bottom: 20px
@@ -60,6 +63,7 @@
       text-decoration: underline
   &__date
     @extend .date
+    padding-top: 2px
     @media (min-width: $breakpoint-tablet)
       +span (3 of 12 no-gutters)
       padding: 0 20px 0 0
@@ -88,6 +92,7 @@
     @media (min-width: $breakpoint-desktop)
       font-size: 18px
       line-height: 24px
+  
   &__tag-link
     position: relative
     z-index: 2
@@ -97,7 +102,8 @@
     margin-left: -8px
     padding: 3px 8px
     color: $black-400
-    font-size: 10px
+    font-family: $font-body
+    font-size: 9px
     font-weight: 700
     text-transform: uppercase
     text-decoration: none
@@ -241,6 +247,21 @@
       +span (7 of 12)
       +push(2 of 12)
 
-.blog-tags
-  padding-left: 8px
+
+
+
+// Code snippets
+
+pre.highlight
+  padding: 10px
+  margin: 15px 0
+  font-size: 1.2em
+  overflow-y: hidden
+  overflow-x: auto
+  -webkit-overflow-scrolling: touch
+  @media (min-width: $breakpoint-tablet)
+    padding: 20px
+    margin: 30px 15px
+
+
 
