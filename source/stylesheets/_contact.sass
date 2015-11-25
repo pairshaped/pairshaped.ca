@@ -10,11 +10,6 @@
     font-family: $font-primary
     font-size: 18px
     line-height: 24px
-    text-align: center
-    @media (min-width: $breakpoint-tablet)
-      font-size: 24px
-      line-height: 28px
-      max-width: 600px
     &-link
       display: block
       transition: color .3s ease
@@ -24,10 +19,10 @@
         border-bottom: none
       &:hover
         color: $brand-primary-500
+    &-title
+      @extend .footer__sub-title
 
   &__social
-    margin-top: 30px
-    text-align: center
     &-icon
       &--github
         color: $black-500
@@ -38,8 +33,6 @@
         &:before
           +materialicon($github)
           padding-right: 10px
-        @media (min-width: $breakpoint-tablet)
-          font-size: 26px
       &--dribbble
         color: $black-500
         transition: color .3s ease
@@ -49,8 +42,6 @@
         &:before
           +materialicon($dribbble)
           padding-right: 10px
-        @media (min-width: $breakpoint-tablet)
-          font-size: 26px
       &--linkedin
         color: $black-500
         transition: color .3s ease
@@ -60,8 +51,6 @@
         &:before
           +materialicon($linkedin)
           padding-right: 10px
-        @media (min-width: $breakpoint-tablet)
-          font-size: 26px
       &--codepen
         color: $black-500
         transition: color .3s ease
@@ -71,7 +60,5 @@
         &:before
           +materialicon($codepen)
           padding-right: 10px
-        @media (min-width: $breakpoint-tablet)
-          font-size: 26px
 
 
