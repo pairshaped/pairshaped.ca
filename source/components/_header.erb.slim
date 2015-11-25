@@ -3,7 +3,7 @@ a name="top"
   .container
     = link_to image_tag("logo-pairshaped.svg"), '/', class: 'header__logo'
 
-    .header-menu class=('header-menu--open' if current_page.url.start_with?('/menu'))
+    .header-menu
       a.header-menu__icon href="/menu"
 
       .header__nav-list.header-hover
