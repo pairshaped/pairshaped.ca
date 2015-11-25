@@ -1,5 +1,6 @@
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true
+activate :syntax
 
 ###
 # Compass
@@ -75,8 +76,6 @@ set :fonts_dir, 'fonts'
 
 # Use pretty URLs
 activate :directory_indexes
-
-activate :rouge_syntax
 
 # Build-specific configuration
 configure :build do
