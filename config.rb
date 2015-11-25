@@ -43,6 +43,14 @@ configure :development do
   activate :livereload
 end
 
+after_configuration do
+  if defined?(RailsAssets)
+    RailsAssets.load_paths.each do |path|
+      sprockets.append_path path
+    end
+  end
+end
+
 activate :blog do |blog|
   blog.permalink = "blog/:title.html"
   blog.sources = "blog/:title.html"

@@ -30,3 +30,7 @@ gem 'guard-livereload', '~> 2.4.0'
 
 gem 'foreman', '~> 0.78.0'
 gem 'thin', '~> 1.6.3'
+
+source 'https://rails-assets.org' do
+
+end
