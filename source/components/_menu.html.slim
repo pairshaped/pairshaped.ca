@@ -5,8 +5,8 @@
     .header-menu
       a.header-menu__icon.header-menu__icon--close onclick="toggleMobileMenu();return false;"
   .mobile-menu__nav-list
-    a.mobile-menu__nav-item href="/" class=('header__nav-item--active' if current_page.url == '/') Home
-    a.mobile-menu__nav-item href="/work" class=('header__nav-item--active' if current_page.url.start_with?('/work')) Work
-    a.mobile-menu__nav-item href="/blog" class=('header__nav-item--active' if current_page.url.start_with?('/blog')) Blog
-    a.mobile-menu__nav-item href="/about" class=('header__nav-item--active' if current_page.url.start_with?('/about')) About
-    a.mobile-menu__nav-item href="/contact" class=('header__nav-item--active' if current_page.url.start_with?('/contact')) Contact
+    a.mobile-menu__nav-item href="/" class=('mobile-menu__nav-item--active' if current_page.url == '/') Home
+    a.mobile-menu__nav-item href="/work" class=('mobile-menu__nav-item--active' if current_page.url.start_with?('/work')) Work
+    a.mobile-menu__nav-item href="/blog" class=('mobile-menu__nav-item--active' if current_page.url.start_with?('/blog')) Blog
+    a.mobile-menu__nav-item href="/about" class=('mobile-menu__nav-item--active' if current_page.url.start_with?('/about')) About
+    a.mobile-menu__nav-item href="/contact" class=('mobile-menu__nav-item--active' if current_page.url.start_with?('/contact')) Contact

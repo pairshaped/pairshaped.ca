@@ -2,11 +2,10 @@
 
 .about
   // Column Layouts
-  &__first-column
-    padding-right: 20px
   &__second-column
     @media (min-width: $breakpoint-tablet)
       border: 1px solid $black-200
+      margin-left: 180px
 
   // Side Scroll
   &__scroll
@@ -57,22 +56,18 @@
 // - - - - About Us Layout - - - - //
 
 .about
-  // Column Layouts
-  &__first-column
-    display: none
-    @media (min-width: $breakpoint-tablet)
-      +span(2 of 12 no-gutter)
-      display: block
-      position: relative
-      min-height: 300px
-  &__second-column
-    @media (min-width: $breakpoint-tablet)
-      +span(10 of 12 no-gutter)
 
   // Side Scroll
   &__scroll
-    padding-top: 40px
-    position: fixed
+    display: none
+    @media (min-width: $breakpoint-tablet)
+      position: fixed
+      display: block
+      width: 180px
+      padding-top: 40px
+      padding-right: 20px
+
+
     &-item
       display: block
       margin-bottom: 10px
