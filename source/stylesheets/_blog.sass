@@ -145,6 +145,7 @@
         animation-fill-mode: forwards
         animation-delay: 0
         transform-origin: 0% 100%
+
   &__author
     +clearfix
     @media (min-width: $breakpoint-tablet)
@@ -247,16 +248,121 @@
       +span (7 of 12)
       +push(2 of 12)
 
+
+
+// Blog Post - Header Styling
+
+.blog-header
+  +clearfix
+  max-width: $breakpoint-tablet
+  margin: 20px auto 0 auto
+  padding: 0 20px
+  &__date
+    display: block
+    color: $black-400
+    font-size: 12px
+  &__description
+    display: block
+    h2
+      margin: 20px 0 10px 0
+      font-family: $font-primary
+      font-size: 24px
+      @media (min-width: $breakpoint-tablet)
+        font-family: 'decima_monolight'
+        font-size: 40px
+  &__tags
+    margin: 0 0 20px 10px
+  &__author
+    @extend .blog__author
+    margin-bottom: 20px
+    &-image
+      @extend .blog__author-image
+      float: left
+      @media (min-width: $breakpoint-desktop)
+        float: left
+
+      &--alex-barry
+        background-image: image-url('bio-beard.jpg')
+
+      &--andrew-noble
+        background-image: image-url('bio-noble.jpg')
+
+      &--brian-hogg
+        background-image: image-url('bio-brian.jpg')
+
+      &--dave-rapin
+        background-image: image-url('bio-dave.jpg')
+
+      &--dayton-pereira
+        background-image: image-url('bio-dayton.jpg')
+
+      &--forrest-phillips
+        background-image: image-url('bio-forrest.jpg')
+
+      &--josh-teeter
+        background-image: image-url('bio-josh.jpg')
+
+      &--justin-fortier
+        background-image: image-url('bio-justin.jpg')
+
+    &-name
+      @extend .blog__author-name
+      float: left
+      text-transform: capitalize
+      @media (min-width: $breakpoint-desktop)
+        float: left
+      
+
+// Blog Post - Content Styling
 .blog-content
   max-width: $breakpoint-tablet
-  margin: 0 auto
+  margin: 40px auto
+
+  a
+    color: $brand-primary-500
+    &:hover
+      border-bottom: 1px solid $brand-primary-500
+  p
+    margin: 10px 0
+
+  li
+    margin-bottom: 20px
+    font-family: $font-body
+    list-style-type: square
+
+  h2
+    margin: 40px 0
+    margin-bottom: 10px
+    text-transform: uppercase
+    font-size: 16px
+
+  h3
+    margin: 20px 0 
+    text-transform: uppercase
+    font-size: 14px
+
+  h4
+    margin: 20px 0 
+    text-transform: uppercase
+    font-family: $font-body
+    font-size: 11px
+    font-weight: 700px
+
+  blockquote
+    p
+      padding-left: 20px
+      color: $black-500
+      font-family: 'decima_monoitalic'
+      font-size: 16px
+      line-height: 18px
+      border-left: 2px solid $brand-primary-500
 
 // Code snippets
 
 pre.highlight
   padding: 10px 8px
-  margin: 15px 0
-  font-size: 1.2em
+  margin: 20px 0
+  font-size: 14px
   overflow-y: hidden
   overflow-x: auto
   -webkit-overflow-scrolling: touch

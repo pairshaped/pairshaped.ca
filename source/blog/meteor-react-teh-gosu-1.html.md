@@ -7,6 +7,10 @@ author: "Dave Rapin"
 
 This is part one of a series of posts that go through creating a new web app with Meteor and React.
 
+> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
+consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
+Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
+
 ## Prerequisites
 
 1. [Meteor](https://www.meteor.com/install)
@@ -43,11 +47,11 @@ We're going to step through building a Hot or Not style of application tailored 
 
 The three main components are:
 
-#### Submit a Play
+### Submit a Play
 
 User should be able to submit a new play. The play will have a title, description, and Youtube URL.
 
-#### Vote on Plays
+### Vote on Plays
 
 User should be able to see two plays and vote for one of them.
 
@@ -55,7 +59,7 @@ Once user has voted for a play, they will be replaced with two new plays that th
 
 There is no limit to the number of plays the user can vote on, however the user may not vote on the same play more than once.
 
-#### Leaderboard
+### Leaderboard
 
 User should see a list of top ten plays with the most votes, ordered by number of votes descending.
 This list will update in real time as votes are added.
