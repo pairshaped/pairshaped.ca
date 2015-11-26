@@ -70,6 +70,27 @@
         transition-delay: inherit
       @media (min-width: $breakpoint-tablet)
         display: none
+      &--close
+        &:after
+          top: 19px
+          right: 8px
+          width: 24px
+          transform: rotateZ(45deg) translateY(0)
+          transform-origin: 50% 50%
+
+        &:before
+          top: 19px
+          right: 8px
+          width: 24px
+          transform: rotateZ(-45deg) translateY(0)
+          transform-origin: 50% 50%
+        &:hover
+          &:after, &:before
+            right: 12px
+            width: 16px
+
+
+
 
   &__nav-item
     position: relative
@@ -112,26 +133,6 @@
         animation-fill-mode: forwards
     @media (min-width: $breakpoint-tablet)
       display: inline-block
-
-
-// Open State
-.header-menu--open
-  .header-menu__icon
-    //outline: 1px solid red
-    &:after
-      top: 19px
-      right: 8px
-      width: 24px
-      transform: rotateZ(45deg)
-      transform-origin: 50% 50%
-      //transition-delay: 0s
-    &:before
-      top: 19px
-      right: 8px
-      width: 24px
-      transform: rotateZ(-45deg)
-      transform-origin: 50% 50%
-      //transition-delay: 0s
 
 
 
