@@ -63,6 +63,8 @@
     @media (min-width: $breakpoint-tablet)
       +span(2 of 12 no-gutter)
       display: block
+      position: relative
+      min-height: 300px
   &__second-column
     @media (min-width: $breakpoint-tablet)
       +span(10 of 12 no-gutter)
@@ -70,13 +72,13 @@
   // Side Scroll
   &__scroll
     padding-top: 40px
+    position: fixed
     &-item
-      position: relative
       display: block
       margin-bottom: 10px
       font-family: $font-primary
 
-  //Contact
+  // Contact
   &__contact
     &-link
       color: $brand-primary-500
