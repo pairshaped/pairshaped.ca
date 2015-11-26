@@ -13,6 +13,8 @@ html
 
 body( class=page_classes )
   = partial "components/header"
-  = partial "components/blog_header"
-  = yield
+  .container
+    = partial "components/blog_header"
+    .blog-content
+      = yield
   = partial "components/footer"
