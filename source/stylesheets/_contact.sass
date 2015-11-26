@@ -1,15 +1,28 @@
 // - - - - Contact Styling - - - - //
 .contact
+  @media (min-width: $breakpoint-tablet)
+    height: 70vh
+
+  &__map
+    display: none
+    float: top
+    height: 400px
+    @media (min-width: $breakpoint-tablet)
+      display: block
+      float: left
+      width: 50%
+      height: 100%
+
   &__info
-    position: relative
-    max-width: 300px
-    margin-left: auto
-    margin-right: auto
     padding: 20px
     color: $black-500
     font-family: $font-primary
     font-size: 18px
     line-height: 24px
+    @media (min-width: $breakpoint-tablet)
+      float: right
+      width: 50%
+      height: 100%
     &-link
       display: block
       transition: color .3s ease
@@ -22,43 +35,43 @@
     &-title
       @extend .footer__sub-title
 
-  &__social
-    &-icon
-      &--github
-        color: $black-500
-        transition: color .3s ease
-        font-size: 20px
-        &:hover
-          color: $brand-primary-500
-        &:before
-          +materialicon($github)
-          padding-right: 10px
-      &--dribbble
-        color: $black-500
-        transition: color .3s ease
-        font-size: 20px
-        &:hover
-          color: $brand-primary-500
-        &:before
-          +materialicon($dribbble)
-          padding-right: 10px
-      &--linkedin
-        color: $black-500
-        transition: color .3s ease
-        font-size: 20px
-        &:hover
-          color: $brand-primary-500
-        &:before
-          +materialicon($linkedin)
-          padding-right: 10px
-      &--codepen
-        color: $black-500
-        transition: color .3s ease
-        font-size: 20px
-        &:hover
-          color: $brand-primary-500
-        &:before
-          +materialicon($codepen)
-          padding-right: 10px
+    &-social
+      &-icon
+        &--github
+          color: $black-500
+          transition: color .3s ease
+          font-size: 20px
+          &:hover
+            color: $brand-primary-500
+          &:before
+            +materialicon($github)
+            padding-right: 10px
+        &--dribbble
+          color: $black-500
+          transition: color .3s ease
+          font-size: 20px
+          &:hover
+            color: $brand-primary-500
+          &:before
+            +materialicon($dribbble)
+            padding-right: 10px
+        &--linkedin
+          color: $black-500
+          transition: color .3s ease
+          font-size: 20px
+          &:hover
+            color: $brand-primary-500
+          &:before
+            +materialicon($linkedin)
+            padding-right: 10px
+        &--codepen
+          color: $black-500
+          transition: color .3s ease
+          font-size: 20px
+          &:hover
+            color: $brand-primary-500
+          &:before
+            +materialicon($codepen)
+            padding-right: 10px
 
 
