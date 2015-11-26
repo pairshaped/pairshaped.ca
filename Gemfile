@@ -32,5 +32,6 @@ gem 'foreman', '~> 0.78.0'
 gem 'thin', '~> 1.6.3'
 
 source 'https://rails-assets.org' do
-
+  gem 'rails-assets-jQuery'
+  gem 'rails-assets-ScrollMagic'
 end

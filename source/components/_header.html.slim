@@ -1,10 +1,11 @@
+= partial "components/menu"
 a name="top"
 .header
   .container
     = link_to image_tag("logo-pairshaped.svg"), '/', class: 'header__logo'
 
     .header-menu
-      a.header-menu__icon href="/menu"
+      a.header-menu__icon href="#" onclick="toggleMobileMenu();return false;"
 
       .header__nav-list.header-hover
         a.header__nav-item href="/" class=('header__nav-item--active' if current_page.url == '/') Home
