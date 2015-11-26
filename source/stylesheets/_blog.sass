@@ -145,6 +145,7 @@
         animation-fill-mode: forwards
         animation-delay: 0
         transform-origin: 0% 100%
+
   &__author
     +clearfix
     @media (min-width: $breakpoint-tablet)
@@ -249,12 +250,94 @@
 
 
 
-//
+// Blog Post - Header Styling
 
+.blog-header
+  +clearfix
+  max-width: $breakpoint-tablet
+  margin: 20px auto 0 auto
+  padding: 0 20px
+  &__date
+    display: block
+  &__description
+    display: block
+    h2
+      margin: 20px 0 10px 0
+      font-family: $font-primary
+      font-size: 24px
+      @media (min-width: $breakpoint-tablet)
+        font-family: 'decima_monolight'
+        font-size: 40px
+  &__tags
+    margin: 0 0 20px 10px
+  &__author
+    @extend .blog__author
+    margin-bottom: 20px
+    &-image
+      @extend .blog__author-image
+      float: left
+      @media (min-width: $breakpoint-desktop)
+        float: left
+
+      &--alex-barry
+        background-image: image-url('bio-beard.jpg')
+
+      &--andrew-noble
+        background-image: image-url('bio-noble.jpg')
+
+      &--brian-hogg
+        background-image: image-url('bio-brian.jpg')
+
+      &--dave-rapin
+        background-image: image-url('bio-dave.jpg')
+
+      &--dayton-pereira
+        background-image: image-url('bio-dayton.jpg')
+
+      &--forrest-phillips
+        background-image: image-url('bio-forrest.jpg')
+
+      &--josh-teeter
+        background-image: image-url('bio-josh.jpg')
+
+      &--justin-fortier
+        background-image: image-url('bio-justin.jpg')
+
+    &-name
+      @extend .blog__author-name
+      float: left
+      text-transform: capitalize
+      @media (min-width: $breakpoint-desktop)
+        float: left
+      
+
+// Blog Post - Content Styling
 .blog-content
   max-width: $breakpoint-tablet
-  margin: 0 auto
-
+  margin: 40px auto 0 auto
+  a
+    color: $brand-primary-500
+    transform: border-bottom .3s ease
+    &:hover
+      border-bottom: 1px solid $brand-primary-500
+  li
+    margin-bottom: 20px
+    font-family: $font-body
+    font-size: 12px
+    list-style-type: square
+    @media (min-width: $breakpoint-tablet)
+      font-size: 14px
+      line-height: 20px
+    a
+     
+  blockquote
+    p
+      padding-left: 20px
+      color: $black-500
+      font-family: 'decima_monoitalic'
+      font-size: 16px
+      line-height: 18px
+      border-left: 2px solid $brand-primary-500
 
 // Code snippets
 
