@@ -1,0 +1,11 @@
+.blog-header
+  .blog__date= current_article.date.strftime("%b %d, %Y")
+    .blog-description
+      h2. = current_article.title
+      .blog-tags
+        - current_article.data.tags.each do |tag, article|
+          = link_to tag, tag_path(tag), class: 'blog__tag-link'
+    - if current_article.data.author
+      .blog__author
+        div( class="blog__author-image blog__author-image--#{current_article.data.author.parameterize}")
+        .blog__author-name= current_article.data.author
