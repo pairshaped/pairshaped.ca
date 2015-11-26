@@ -248,21 +248,19 @@
       +span (7 of 12)
       +push(2 of 12)
 
-<<<<<<< HEAD
 
 
 // Blog Post - Header Styling
 
 .blog-header
   +clearfix
-=======
-.blog-content
->>>>>>> 241cffccf8d2cad84353333c3240d844363c063d
   max-width: $breakpoint-tablet
   margin: 20px auto 0 auto
   padding: 0 20px
   &__date
     display: block
+    color: $black-400
+    font-size: 12px
   &__description
     display: block
     h2
@@ -298,7 +296,6 @@
       &--dayton-pereira
         background-image: image-url('bio-dayton.jpg')
 
-<<<<<<< HEAD
       &--forrest-phillips
         background-image: image-url('bio-forrest.jpg')
 
@@ -319,22 +316,38 @@
 // Blog Post - Content Styling
 .blog-content
   max-width: $breakpoint-tablet
-  margin: 40px auto 0 auto
+  margin: 40px auto
+
   a
     color: $brand-primary-500
-    transform: border-bottom .3s ease
     &:hover
       border-bottom: 1px solid $brand-primary-500
+  p
+    margin: 10px 0
+
   li
     margin-bottom: 20px
     font-family: $font-body
-    font-size: 12px
     list-style-type: square
-    @media (min-width: $breakpoint-tablet)
-      font-size: 14px
-      line-height: 20px
-    a
-     
+
+  h2
+    margin: 40px 0
+    margin-bottom: 10px
+    text-transform: uppercase
+    font-size: 16px
+
+  h3
+    margin: 20px 0 
+    text-transform: uppercase
+    font-size: 14px
+
+  h4
+    margin: 20px 0 
+    text-transform: uppercase
+    font-family: $font-body
+    font-size: 11px
+    font-weight: 700px
+
   blockquote
     p
       padding-left: 20px
@@ -344,14 +357,12 @@
       line-height: 18px
       border-left: 2px solid $brand-primary-500
 
-=======
->>>>>>> 241cffccf8d2cad84353333c3240d844363c063d
 // Code snippets
 
 pre.highlight
   padding: 10px 8px
-  margin: 15px 0
-  font-size: 1.2em
+  margin: 20px 0
+  font-size: 14px
   overflow-y: hidden
   overflow-x: auto
   -webkit-overflow-scrolling: touch
