@@ -1,9 +1,9 @@
-.mobile-menu.mobile-menu--hidden
+#mobile-menu.mobile-menu
   .header
     .container
       = link_to image_tag("logo-pairshaped.svg"), '/', class: 'header__logo'
     .header-menu
-      a.header-menu__icon.header-menu__icon--close href="#"
+      a.header-menu__icon.header-menu__icon--close onclick="toggleMobileMenu();return false;"
   .mobile-menu__nav-list
     a.mobile-menu__nav-item href="/" class=('header__nav-item--active' if current_page.url == '/') Home
     a.mobile-menu__nav-item href="/work" class=('header__nav-item--active' if current_page.url.start_with?('/work')) Work
