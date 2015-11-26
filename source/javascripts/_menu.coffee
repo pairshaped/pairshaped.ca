@@ -1,3 +1,4 @@
 window.toggleMobileMenu = ->
   menu = document.getElementById('mobile-menu')
-  menu.style.display = if menu.style.display == 'block' then 'none' else 'block'
+  console.log(menu.className)
+  menu.className = if menu.className == 'mobile-menu' then 'mobile-menu--open' else 'mobile-menu'
