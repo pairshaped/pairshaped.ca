@@ -7,10 +7,6 @@ author: "Dave Rapin"
 
 This is part one of a series of posts that go through creating a new web app with Meteor and React.
 
-> This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.
-
 ## Prerequisites
 
 1. [Meteor](https://www.meteor.com/install)
