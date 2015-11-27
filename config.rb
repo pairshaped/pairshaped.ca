@@ -56,7 +56,7 @@ activate :blog do |blog|
   blog.permalink = "blog/:title.html"
   blog.sources = "blog/:title.html"
   blog.tag_template = "tag.html"
-  blog.taglink = "tags/{tag}"
+  blog.taglink = "tags/{tag}/index.html"
   blog.layout = "layouts/blog"
 end
 
