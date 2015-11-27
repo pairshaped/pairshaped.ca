@@ -101,7 +101,7 @@ Option 2 appears to be a decent solution that maintains the context of the curre
 
 That leaves option 3, and also happens to be the least complicated to implement.
 
-#TL;DR
+##TL;DR
 
 While I recognize that Table Usability isn’t exactly the most exciting topic, it’s one that is often overlooked even by the most experienced teams. If you were too busy (lazy) to read the whole thing, here’s the takeaways:
 

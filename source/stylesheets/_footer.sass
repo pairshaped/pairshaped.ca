@@ -74,19 +74,6 @@
         text-decoration: underline
         color: white
         cursor: pointer
-
-  &__social
-    display: none
-    @media (min-width: $breakpoint-tablet)
-      +span (3 of 12 no-gutters)
-      display: inline
-    &-title
-      @extend %footer-title
-    &-list
-      @extend %footer-body
-      list-style: none
-      padding: 0
-    &-link
       &--github
         &:before
           +materialicon($github)
@@ -103,6 +90,14 @@
         &:before
           +materialicon($codepen)
           padding-right: 10px
+
+  &__social
+    display: none
+    @media (min-width: $breakpoint-tablet)
+      +span (3 of 12 no-gutters)
+      display: inline
+    
+     
 
   &__top-link
     +span(4 of 12 no-gutter)
