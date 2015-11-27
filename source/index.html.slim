@@ -4,9 +4,10 @@ title: Pair Shaped
 
 .hero
   .container
-    .hero__pitch Lorem ipsum dolor sit amet
+    .hero__pitch Small Team. High Standards.
 
-    .hero__scroll-diamond
+    a.hero__scroll-diamond href="#into"
+
 
 .container
   .intro
@@ -17,7 +18,7 @@ title: Pair Shaped
 
 .projects.container
   .section-header
-    h3.section-header__title Projects
+    h3.section-header__title Latest Projects
 
   .projects-list
     .projects-list-item
@@ -28,7 +29,7 @@ title: Pair Shaped
 
     .projects-list-item
       .projects__image
-        = link_to image_tag("work-nbc.jpg"), '#', class: 'projects__img'
+        = link_to image_tag("work-nbc.jpg"), '/blog/nbc-primetime-companion-sochi/', class: 'projects__img'
       .projects__title  NBC Primetime Olympics
       .projects__type iOS and Android Native Apps
 
@@ -40,8 +41,8 @@ title: Pair Shaped
 
     .projects-list-item
       .projects__image
-        = link_to image_tag("work-curling-canada.jpg"), '#', class: 'projects__img', target: '_blank'
-      .projects__title  Curling Canada
+        = link_to image_tag("work-golf-canada.jpg"), 'http://golfcanada.ca/', class: 'projects__img', target: '_blank'
+      .projects__title  Golf Canada
       .projects__type Site Re-Design
 
 .break-line
