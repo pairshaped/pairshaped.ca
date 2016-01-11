@@ -128,6 +128,39 @@
       @media (min-width: $breakpoint-desktop)
         flex: 1 0 calc(25% - 20px)
 
+  // Image Grid
+
+.client
+  &__stack
+    padding: 40px 20px 0 20px
+    clear: both
+  
+.client-grid
+  display: -webkit-flex
+  display: flex
+  clear: both
+  width: 100%
+  flex-wrap: wrap
+  &__item
+    display: inline-block
+    width: calc(50% - 10px)
+    margin: 0 10px 10px 0
+    justify-content: flex-start
+    text-align: center
+    @media (min-width: 560px)
+      width: calc(33% - 10px)
+    @media (min-width: $breakpoint-tablet)
+      width: calc(25% - 10px)
+  &__image
+    height: 120px
+    background-color: $black-100
+  &__img
+    margin-top: 20px
+    width: 80px
+    height: 80px
+
+
+
 
 
 

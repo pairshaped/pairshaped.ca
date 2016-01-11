@@ -49,5 +49,63 @@ title: Pair Shaped
     .section-header__link
       a.link-forwards href="/blog" Visit Blog
 
+
   - blog.articles[0...3].each do |article|
     = partial 'components/blog_item', locals: { article: article }
+
+.break-line
+
+.client__stack.container
+  a.anchor name='stack'
+  h3.section-header__title Brands we've worked with
+
+  .client__stack-grid
+    .client-grid
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-tsn.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-tiger-cats.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-nbc.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-chl.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-qmjhl.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-ohl.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-whl.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-pfizer.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-cannondale.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-golf-canada.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-curling-canada.svg', class: 'client-grid__img')
+
+      .client-grid__item
+        .client-grid__image
+          =image_tag('brand-kubota.svg', class: 'client-grid__img')
