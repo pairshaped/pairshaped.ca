@@ -26,7 +26,7 @@ div { className: 'header' },
         div { className: 'header__navigation-item' },
           a
             className: 'header__navigation-item-link'
-            href: “#”
+            href: "#"
             target: '_blank'
 ```
 
