@@ -79,15 +79,15 @@ You can find a basic guideline we follow [here](http://codepen.io/ForrestPhillip
   width: 100%
   &__logo
     position: absolute
-      width: 80px
-      height: 80px
-      color: red
-      @media (min-width: 1024px)
-        width: 120px
-        height: 120px
-        &--bigger
-          width: 240px
-          height: 240px
+    width: 80px
+    height: 80px
+    color: red
+    @media (min-width: 1024px)
+      width: 120px
+      height: 120px
+    &--bigger
+      width: 240px
+      height: 240px
 ```
 
 ## Conclusion
