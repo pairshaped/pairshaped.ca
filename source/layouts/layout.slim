@@ -7,6 +7,7 @@ html
     meta name="google-site-verification" content="iYDvE-jksDQ1YWDVpidD7st6MtjqJ_2zA8YU-cniDlg"
     link rel="icon" type="image/png" href="/images/favicon_pairshaped.png"
     title= current_page.data.title || "Pair Shaped"
+    meta description= "We build real-time applications that connect people and things at the moments they happen."
     = stylesheet_link_tag "all"
     = javascript_include_tag "all"
 
@@ -16,7 +17,7 @@ html
       |      height: 100%;
       |  }
     script src="https://maps.googleapis.com/maps/api/js?sensor=false"
-    
+
     script
       |  google.maps.event.addDomListener(window, 'load', init);
       |    function init() {
@@ -25,10 +26,10 @@ html
       |          center: new google.maps.LatLng(43.451609, -80.497924),
       |          styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"administrative.neighborhood","elementType":"all","stylers":[{"hue":"#9B59B6"},{"saturation":"22"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#9B59B6"},{"visibility":"on"}]}]
       |     };
-      |     
+      |
       |     var mapElement = document.getElementById('map');
       |     var map = new google.maps.Map(mapElement, mapOptions);
-      |    
+      |
       |     var image = '/images/icon-google-map.png';
       |     var marker = new google.maps.Marker({
       |         position: new google.maps.LatLng(43.451609, -80.497924),
@@ -44,4 +45,3 @@ body( class=page_classes )
   = yield
   = partial "components/footer"
 
-  
