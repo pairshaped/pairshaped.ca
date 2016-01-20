@@ -7,15 +7,6 @@
       border: 1px solid $black-200
       margin-left: 180px
 
-  // Side Scroll
-  &__scroll
-    &-item
-      color: $brand-primary-500
-      text-align: right
-      transition: color .3s ease
-      &:hover
-        color: shade($brand-primary-500, 30)
-
   // Sections
   &__intro, &__philosophy, &__process-culture, &__team, &__stack,  &__contact
     padding: 0 20px
@@ -34,8 +25,6 @@
       text-transform: uppercase
       &:hover
         text-decoration: underline
-      &--active
-        color: $black-300
   &__stack-grid
     padding: 0 20px
 
@@ -65,13 +54,29 @@
       display: block
       width: 180px
       padding-top: 40px
-      padding-right: 20px
-
 
     &-item
+      position: relative
       display: block
-      margin-bottom: 10px
+      padding: 5px 20px 5px 0
+      clear: both
+      color: $black-400
+      text-align: right
       font-family: $font-primary
+      transition: background-color 0.2s ease-out
+      &.active, &:hover
+        color: $black-500
+      &.active
+        background-color: $black-100
+        &:after
+          position: absolute
+          height: 100%
+          width: 3px
+          top: 0
+          right: 0
+          content: ""
+          background-color: $brand-primary-500
+
 
   // Contact
   &__contact

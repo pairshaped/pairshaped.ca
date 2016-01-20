@@ -8,8 +8,10 @@ html
     link rel="icon" type="image/png" href="/images/favicon_pairshaped.png"
     title= current_page.data.title || "Pair Shaped"
     = stylesheet_link_tag "all"
-    = javascript_include_tag "all"
+    script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"
+    script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"
 
+    = javascript_include_tag "all"
 
 body( class=page_classes )
   = partial "components/header"
