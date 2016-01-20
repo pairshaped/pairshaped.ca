@@ -3,7 +3,7 @@ title: "Why BEM?"
 date: 2016-1-20
 tags: [javascript, coffeescript, CSS, SASS]
 author: "Forrest Phillips"
-published: false
+published: true
 ---
 
 BEM (Block Element Modifier) is a naming convention created by [Yandex](https://en.bem.info/method/) that we have adopted to help organize our CSS in a meaningful way.
