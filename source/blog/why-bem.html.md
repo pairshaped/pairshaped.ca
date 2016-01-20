@@ -16,7 +16,7 @@ BEM (Block Element Modifier) is a naming convention created by [Yandex](https://
 
 ## The DOM is an indiscernible mess
 
-BEM can be a bit verbose, something to remember is that the class names do not necessarily need to reflect structure of the DOM. If you get caught, it's really easy to make a bit of a mess. However, even a BEM mess is still better than meaningless pile of unrelated class names. This will make your DOM ugly and make it difficult to reuse components. It also means that all of the styles for the header, navigation and links would be contained in the **header.coffee** and  **header.sass** files.
+BEM can be a bit verbose. Something to remember is that the class names do not necessarily reflect the structure of the DOM. If you get caught, it's really easy to make a bit of a mess. However, even a BEM mess is still better than a meaningless pile of unrelated class names. This will make your DOM ugly and make it difficult to reuse components. It also means that all of the styles for the header, navigation and links would be contained in the **header.coffee** and  **header.sass** files.
 
 ```coffeescript
 div { className: 'header' },
@@ -30,9 +30,9 @@ div { className: 'header' },
             target: '_blank'
 ```
 
-One of our developers went so far as to code a library to help enforce the BEM naming conventions when writing javascript. Simply by using the [library](https://www.npmjs.com/package/bemmer-node) it makes class naming much simpler and more consistent.
+One of our developers (Alex Barry) went so far as to code a library to help enforce the BEM naming conventions when writing javascript. Simply using the [library](https://www.npmjs.com/package/bemmer-node) makes class naming much simpler and consistent.
 
-In the following example you can see our preferred approach to the naming of DOM elements. You can see that the menu system rests inside the header but it's named in a way that makes it independent from the header. That also goes for the link inside the navigation, since in this case we don't want it styled any different from other links on the site. All of basic links on our site will use the class name "**default-link**" and share all of the declared styles. The independent blocks are also good indicators of reusable components.
+In the following example, you can see our preferred approach to the naming of DOM elements. You can see that the menu system rests inside the header but it's named in a way that makes it independent from the header. That also applies to the link inside the navigation, since in this case we don't want it styled differently from other links on the site. All of the basic links on our site will use the class name "**default-link**" and share all of the declared styles. The independent blocks are also good indicators of reusable components.
 
 ```coffeescript
 div { className: 'header' },
@@ -48,9 +48,9 @@ div { className: 'header' },
 
 ## File folders are disorganized and it's difficult to find what you're looking for
 
-By following the BEM naming convention we found it that our file names, CSS and DOM are all more closely related. For example; Here we want to create a header and add a logo to it. So we create a component file, let's say in this case it's coffeescript. We will call the file  **header.coffee** and store it in the components folder.
+By following the BEM naming convention we found it that our file names, CSS and DOM are more closely related. For example: Here we want to create a header and add a logo. So we create a component file and let's say in this case it's coffeescript. We will call the file  **header.coffee** and store it in the components folder.
 
-Then we create a SASS file in the stylesheets -> components folder also called **header.sass**. In this header we also want to include a menu, but we know we'll be reusing the component in other places on the site. So we create two files for it as well, **navigation.coffee** and **navigation.sass** in their appropriate folders.
+Then we create a SASS file in the stylesheets/components folder also called **header.sass**. In this header we also want to include a menu, but we know we'll be reusing the component in other places on the site. So we create two files for it as well, **navigation.coffee** and **navigation.sass** in their appropriate folders.
 
 ```
 scripts/coffee/main.coffee
@@ -67,9 +67,9 @@ We now have a DOM that directly reflects the file structure. This makes our code
 
 ## CSS is an unmaintainable nightmare of spiderwebs
 
-BEM and SASS play very nice together. In our header.sass file we can declare a few things; First off some basic styles for the header layout, logo. The styles for the navigation will go in their own file. SASS supports inline media queries which are just fantastic. When styling with BEM one should readily avoid using the !important tag and nested styles. When BEM is employed correctly, the need for an !important flag can be an indicator that something is wrong.
+BEM and SASS play very nice together. In our header.sass file we can declare a few things; First off some basic styles for the header layout and logo. The styles for the navigation will go in their own file. SASS supports inline media queries which are just fantastic. When styling with BEM one should readily avoid using the !important tag and nested styles. When BEM is employed correctly, the need for an !important flag can be an indicator that something is wrong.
 
-We also approach our CSS mobile first, so all of our media queries are generally based on the min-width of tablet and desktop breakpoints. It's important to remember to declare the mobile styles first, then your tablet media query, followed by your desktop. Cascading means you don't always need to declare a max-width on your media queries. We even organize all our CSS styles to improve legibility, it seems tedious at first but we have found it be second nature now.
+We also approach our CSS mobile first, so that all of our media queries are based on the min-width of tablet and desktop breakpoints. It's important to remember to declare the mobile styles first, then your tablet media query, followed by your desktop. Cascading means you don't always need to declare a max-width on your media queries. We even organize all of our CSS styles to improve legibility. It seems tedious at first but we found that it became second nature.
 
 You can find a basic guideline we follow [here](http://codepen.io/ForrestPhillips/pen/oXoOmE?editors=010).
 
@@ -92,4 +92,4 @@ You can find a basic guideline we follow [here](http://codepen.io/ForrestPhillip
 
 ## Conclusion
 
-Our experience with BEM has been a primarily positive one. For us BEM has been easy to adopt because our company as a whole follows it. BEM is great for encouraging consistency, meaningful naming conventions. It also helps developers directly relate their file structure and CSS to the front end DOM.
+Our experience with BEM has been a positive one. For us BEM has been easy to adopt because our company as a whole follows it. BEM is great for encouraging consistency and meaningful naming conventions. It is also great at helping developers directly relate their file structure and CSS to the front end DOM.
