@@ -13,7 +13,7 @@ This is part one of a series of posts that go through creating a new web app wit
 2. [Nodejs](https://nodejs.org/en/)
 3. OSX, Linux, or Cygwin.
 
-## Why Metor?
+## Why Meteor?
 
 We're always on the lookout for new methodologies in the web stack, and Meteor is one we've been keeping an eye on for a while.
 Here's what we like about it:
