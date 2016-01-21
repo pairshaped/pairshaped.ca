@@ -10,13 +10,22 @@
   // Sections
   &__intro, &__philosophy, &__process-culture, &__team, &__stack,  &__contact
     padding: 0 20px
-
+    border-bottom: 1px solid $black-200
+    &:after
+      display: block
+      content: ''
+      height: 30px
+      width: 100%
+  &__contact
+    &:after
+      height: 180px
   // Stack Section Specific Styling
   &__title
     padding-left: 20px
   &__filters
-    padding: 0 0 20px 0
+    padding: 30px 0
     list-style: none
+    border-bottom: 1px solid $black-300
     @media (min-width: $breakpoint-tablet)
       padding-right: 20px
     &-item
@@ -73,11 +82,7 @@
       &:hover
         text-decoration: underline
 
-  // Sections
-  &__intro, &__philosophy, &__process-culture, &__team, &__contact
-    margin: 40px 0
   &__stack
-    margin: 40px 0 0 0
     &-grid
       padding: 0
 
@@ -99,6 +104,8 @@
         margin: 0 0 0 10px
 
 .sectionheader
+  margin-top: 0
+  padding-top: 30px
   font-family: $font-primary
   text-transform: uppercase
 
