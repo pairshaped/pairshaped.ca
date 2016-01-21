@@ -1,7 +1,6 @@
 window.onload = ->
   controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: 0.4}})
-  #h = $("#section1").height()
-  #console.log(h)
+
   new ScrollMagic.Scene({triggerElement: "#section1", duration: $("#section1").height()})
     .setClassToggle("#submenu1", "active")
     .addTo(controller)
@@ -10,6 +9,7 @@ window.onload = ->
     .setClassToggle("#submenu2", "active")
     .addTo(controller)
     #.addIndicators()
+
   new ScrollMagic.Scene({triggerElement: "#section3", duration: $("#section3").height()})
     .setClassToggle("#submenu3", "active")
     .addTo(controller)
