@@ -29,19 +29,6 @@
     padding: 0 20px
 
 // Image Grid
-.about-grid
-  &__image
-    background-color: $black-100
-  &__text
-    &-header
-      font-family: $font-primary
-      font-size: 12px
-      text-transform: uppercase
-    &-sub-header
-      color: $black-400
-      font-family: $font-primary
-      font-size: 12px
-      font-style: italic
 // - - - - About Us Layout - - - - //
 
 .about
@@ -116,7 +103,10 @@
   text-transform: uppercase
 
 // Image Grid
+
+
 .about-grid
+  +clearfix
   display: -webkit-flex
   display: flex
   clear: both
@@ -134,6 +124,7 @@
       width: calc(25% - 10px)
   &__image
     height: 80px
+    background-color: $black-100
   &__img
     margin-top: 20px
     width: 100px
@@ -144,6 +135,17 @@
     max-width: 100%
   &__text
     margin-top: 5px
+    &-header
+      font-family: $font-primary
+      font-size: 12px
+      text-transform: uppercase
+    &-sub-header
+      color: $black-400
+      font-family: $font-primary
+      font-size: 12px
+      font-style: italic
+
+
 
 
 
