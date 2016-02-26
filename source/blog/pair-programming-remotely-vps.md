@@ -1,5 +1,5 @@
 ---
-title: "Pair Programming Remotely on a VPS"
+title: "Pair Programming Remotely"
 date: 2013-07-04
 tags: [code, pairing, vps, tmux]
 author: "Dave Rapin"
