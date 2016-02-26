@@ -3,6 +3,7 @@ title: "NBC Primetime Campanion App"
 date: 2014-10-20
 tags: [programming, javascript, meteor, reactjs, coffeescript, stuff]
 author: "Dayton Pereira"
+published: false
 ---
 
 Pair Shaped has significant expertise in creating second screen experiences related to sports broadcasting. We were approached by NBC Sports to create a “Primetime Companion” app for their 2014 Sochi Olympics coverage. The goal was to provide NBC’s Primetime Olympics audience with a deeper, interactive “second screen” experience with content delivered via smartphone or tablet in a way that would coincide with what was happening on TV. This simultaneous, complementary mobile experience is what we call “Companion” - the app is meant to be an interactive, ongoing “live” content experience that supplements the sports broadcast.
