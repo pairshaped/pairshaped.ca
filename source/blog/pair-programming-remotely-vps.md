@@ -36,18 +36,20 @@ Open up a terminal if you don't already have one up and follow along with these 
 
 ## Basic Server Setup
 
-    # Log into your droplet and enter the provided password when prompted.
-    ssh root@198.199.xx.x
+```bash
+# Log into your droplet and enter the provided password when prompted.
+ssh root@198.199.xx.x
 
-    # Update the system. This will take a little while to complete.
-    aptitude update
-    aptitude safe-upgrade
+# Update the system. This will take a little while to complete.
+aptitude update
+aptitude safe-upgrade
 
-    # Install essential build tools, git, tmux, vim, and fail2ban.
-    aptitude install build-essential git tmux vim fail2ban
+# Install essential build tools, git, tmux, vim, and fail2ban.
+aptitude install build-essential git tmux vim fail2ban
 
-    # For more details on configuration options for fail2ban start here:
-    # https://www.digitalocean.com/community/articles/how-to-protect-ssh-with-fail2ban-on-ubuntu-12-04
+# For more details on configuration options for fail2ban start here:
+# https://www.digitalocean.com/community/articles/how-to-protect-ssh-with-fail2ban-on-ubuntu-12-04
+```
 
 Next we'll need to setup user accounts for our pair. You can of course setup as many users as you want and run multiple tmux sessions, but that's the topic of a future post.
 
@@ -56,64 +58,70 @@ Follow along with these commands, substituting your preferred usernames for "dav
 
 ## Create Your Pairs
 
-    # Create the wheel group
-    groupadd wheel
-    visudo
-    # Add the following line to the bottom of the file
-    %wheel ALL=(ALL) ALL
-    # Save and quit. (:wq)
+```bash
+# Create the wheel group
+groupadd wheel
+visudo
+# Add the following line to the bottom of the file
+%wheel ALL=(ALL) ALL
+# Save and quit. (:wq)
 
-    # Create our pair users
-    # You'll want to substitude your own usernames for dave and dayton
-    adduser dave
-    adduser dayton
+# Create our pair users
+# You'll want to substitude your own usernames for dave and dayton
+adduser dave
+adduser dayton
 
-    # Add them to the wheel group
-    usermod -a -G wheel dave
-    usermod -a -G wheel dayton
+# Add them to the wheel group
+usermod -a -G wheel dave
+usermod -a -G wheel dayton
+```
 
 Now that we have your users setup with full rights (this is something you may want to change down the road), we can disable the root account and instead use a pair account.
 
 ## Secure the Server
 
-    # Copy your shh key to the server
-    scp ~/.ssh/id_rsa.pub dave@198.199.xx.x:
+```bash
+# Copy your shh key to the server
+scp ~/.ssh/id_rsa.pub dave@198.199.xx.x:
 
-    # Login to your account
-    ssh dave@198.199.xx.x
+# Login to your account
+ssh dave@198.199.xx.x
 
-    # Enable ssh access using your rsa key
-    mkdir .ssh
-    mv id_rsa.pub .ssh/authorized_keys
+# Enable ssh access using your rsa key
+mkdir .ssh
+mv id_rsa.pub .ssh/authorized_keys
 
-    # Now you should be able to ssh to the server using your key. Go ahead and try it. 
-    exit
-    ssh dave@198.199.xx.x
-    # If you have to enter a password, something went wrong. Try these steps again.
+# Now you should be able to ssh to the server using your key. Go ahead and try it. 
+exit
+ssh dave@198.199.xx.x
+# If you have to enter a password, something went wrong. Try these steps again.
 
-    # Edit the sshd config
-    sudo vi /etc/ssh/sshd_config
-    # Disable root login
-    PermitRootLogin no
-    # Save and quit. (:wq)
+# Edit the sshd config
+sudo vi /etc/ssh/sshd_config
+# Disable root login
+PermitRootLogin no
+# Save and quit. (:wq)
 
-    # Reload ssh
-    sudo reload ssh
+# Reload ssh
+sudo reload ssh
+```
 
 Now we have a fairly secure server with our pair accounts using password-less access and it's time to setup the pairing environment. We're going to use [wemux](https://github.com/zolrath/wemux) which is backed by tmux to manage the sessions.
 
 
 ## Wemux Installation
 
-    # Install wemux
-    sudo git clone git://github.com/zolrath/wemux.git /usr/local/share/wemux
-    sudo ln -s /usr/local/share/wemux/wemux /usr/local/bin/wemux
-    sudo cp /usr/local/share/wemux/wemux.conf.example /usr/local/etc/wemux.conf
+```bash
+# Install wemux
+sudo git clone git://github.com/zolrath/wemux.git /usr/local/share/wemux
+sudo ln -s /usr/local/share/wemux/wemux /usr/local/bin/wemux
+sudo cp /usr/local/share/wemux/wemux.conf.example /usr/local/etc/wemux.conf
 
-    # Change the host_list value to your pair usernames
-    sudo vim /usr/local/etc/wemux.conf
-    host_list=(dave dayton)
-    # Save and quit (:wq)
+# Change the host_list value to your pair usernames
+sudo vim /usr/local/etc/wemux.conf
+host_list=(dave dayton)
+# Save and quit (:wq)
+```
 
 You are now the proud owner of a remote pairing environment.
 
@@ -122,8 +130,10 @@ You are now the proud owner of a remote pairing environment.
 
 It's time to take it for a spin and make sure everything's copasetic.
 
-    # Launch a shared tmux session.
-    wemux
+```bash
+# Launch a shared tmux session.
+wemux
+```
 
 You should now be running in a shared tmux session. One of your other accounts (pair2, etc.) can login and use the same command to join your session.
 

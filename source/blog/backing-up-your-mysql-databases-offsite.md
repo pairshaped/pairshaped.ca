@@ -17,31 +17,36 @@ Here's a quick and easy guide to get you up and running backup up all of your My
 ### Automate the MySQL Backup
 
 1. In your home directory:
-  ```
-  mkdir backups && cd backups
-  ```
+
+```bash
+mkdir backups && cd backups
+```
 
 2. Download: <http://sourceforge.net/projects/automysqlbackup/> to the backups directory you just created.
 
 3. Rename it:
-  ```
-  mv automysqlbackup.sh.2.5 automysqlbackup.sh
-  ```
+
+```bash
+mv automysqlbackup.sh.2.5 automysqlbackup.sh
+```
 
 4. Make it executable:
-  ```
-  chmod u+rwx automysqlbackup.sh
-  ```
+
+```bash
+chmod u+rwx automysqlbackup.sh
+```
 
 5. Edit it:
-  ```
-  nano automysqlbackup.sh
-  ```
+
+```bash
+nano automysqlbackup.sh
+```
 
 6. Fill out your database name, password, and the names of the databases you want to backup.
 
 7. Look for the commented POSTBACKUP line. Add these two lines right below it (replace username with your username).
-```
+
+```bash
 BACKUP_TIMESTAMP=$(date +"%m-%d-%Y_%T")
 POSTBACKUP="tarsnap -c -f databases.$BACKUP_TIMESTAMP /home/username/backups"
 ```
@@ -53,25 +58,28 @@ POSTBACKUP="tarsnap -c -f databases.$BACKUP_TIMESTAMP /home/username/backups"
 2. You should have donwloaded, paid for, and installed Tarsnap before continuing.
 
 3. We're going to use the tarsnap sample config (cache dir and key location).
-  ```
-  cd /usr/local/etc
-  cp tarsnap.conf.sample tarsnap.conf
-  ```
+
+```bash
+cd /usr/local/etc
+cp tarsnap.conf.sample tarsnap.conf
+```
 
 4. Now run your backup script:
-  ```
-  sudo ./automysqlbackup.sh
-  ```
+
+```bash
+sudo ./automysqlbackup.sh
+```
 
 5. Check to see if you're backup was created and stored remotely:
-  ```
-  sudo tarsnap --list-archives
-  ```
+
+```bash
+sudo tarsnap --list-archives
+```
 
 6. Now we're going to create a cronjob to run the script on a daily basis (or you could move it to your /etc/cron.daily).
-```
+
+```bash
 sudo crontab -e
-# backup the databases every day at 2:30 AM
 30 2 * * * /home/deploy/backups/automysqlbackup.sh > /home/deploy/cron.log
 ```
 
