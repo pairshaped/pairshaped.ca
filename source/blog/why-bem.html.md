@@ -1,7 +1,7 @@
 ---
 title: "Why BEM?"
 date: 2016-1-20
-tags: [javascript, coffeescript, CSS, SASS]
+tags: [design, css, sass]
 author: "Forrest Phillips"
 published: true
 ---

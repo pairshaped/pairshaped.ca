@@ -1,7 +1,7 @@
 ---
 title: "NBC Primetime Campanion App"
 date: 2014-10-20
-tags: [programming, javascript, meteor, reactjs, coffeescript, stuff]
+tags: [host, angularjs, ruby on rails]
 author: "Dayton Pereira"
 ---
 

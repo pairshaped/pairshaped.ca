@@ -1,7 +1,7 @@
 ---
 title: "Give tables some love and sweat the details"
 date: 2015-10-15
-tags: [programming, User Experience, reactjs]
+tags: [user experience, reactjs, sass]
 author: "Dayton Pereira"
 ---
 

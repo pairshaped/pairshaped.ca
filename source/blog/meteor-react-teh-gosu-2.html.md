@@ -1,7 +1,7 @@
 ---
 title: "Let's Build Something With Meteor and React - Part 2"
 date: 2015-10-20
-tags: [programming, javascript, meteor, reactjs, coffeescript]
+tags: [meteor, reactjs]
 author: "Dave Rapin"
 published: false
 ---

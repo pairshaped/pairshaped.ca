@@ -1,7 +1,7 @@
 ---
 title: "Deploying Meteor with Nginx using Capistrano"
 date: 2015-10-15
-tags: [meteor, nginx, capistrano, deployment, linux]
+tags: [host, meteor, nginx, capistrano, deployment]
 author: "Dave Rapin"
 published: false
 ---

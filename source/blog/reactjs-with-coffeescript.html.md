@@ -1,7 +1,7 @@
 ---
 title: "Using CoffeeScript with ReactJS"
 date: 2015-02-03 9:23
-tags: [programming, javascript, coffeescript, reactjs]
+tags: [javascript, coffeescript, reactjs]
 author: "Dave Rapin"
 ---
 
